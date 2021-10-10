@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.11" PIVersion="1.0.0.0" href="file:///D:\教学\软件项目实践\软件项目实践\文档模板\《投标书》模板.xsn" name="urn:schemas-microsoft-com:office:infopath:-E7V-Qo:" language="zh-cn" productVersion="14.0.0" ?><?mso-application progid="InfoPath.Document"?><投标书 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<首部 项目名称="二手交易平台" 项目标识="线上市场" version="1.0">
+		<状态与版本信息>
+			<文件状态></文件状态>
+			<文件标识></文件标识>
+			<当前版本></当前版本>
+			<作者>
+				<姓名>张羿凡</姓名>
+				<学号>2018011265</学号>
+				<团队>啊对对队</团队>
+			</作者>
+			<完成日期></完成日期>
+			<版本更新信息></版本更新信息>
+		</状态与版本信息>
+		<引言>
+			<使用人员></使用人员>
+			<编写目的></编写目的>
+			<背景></背景>
+		</引言>
+	</首部>
+	<文件编号>05</文件编号>
+	<投标单位>
+		<单位>
+			<名称>啊对对队</名称>
+			<签章>啊对对队专属印章</签章>
+		</单位>
+		<负责人>
+			<姓名>张羿凡</姓名>
+			<职务>系统分析</职务>
+			<签章>张羿凡专属印章</签章>
+		</负责人>
+		<联系方式>
+			<联系人>张羿凡</联系人>
+			<电话>15711343042</电话>
+			<传真>+86+010+12345678</传真>
+		</联系方式>
+	</投标单位>
+	<投标日期>2021-09-24</投标日期>
+	<承包方式><div xmlns="http://www.w3.org/1999/xhtml">工程施工方式：总包（全部工程范围自行施工）</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml">工程结算方工：分为总标价一次包死和按主要工程项目的标价承包。</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml">承诺对招标文件中，国拨材料供应条件的相关内容。</div></承包方式>
+	<投标工程标价>
+		<总标价>10000000000000$</总标价>
+		<单项标价>6000000000000$</单项标价>
+	</投标工程标价>
+	<工程周期>
+		<开工>2021-09-30</开工>
+		<竣工>2021-12-31</竣工>
+		<总工期>92天</总工期>
+	</工程周期>
+	<工程质量><div xmlns="http://www.w3.org/1999/xhtml">产品质量可以达到京东淘宝等一线网络商品平台水平</div>
+<div xmlns="http://www.w3.org/1999/xhtml">公司内部设备齐全，员工工作热情高，水平顶尖。</div></工程质量>
+	<反要约条件>阿里巴巴集团控股有限公司需要配合我司工作。在程序开发进程中，程序功能，前端等功能通过两司开会讨论综合决定。招标书中如有遇有国家调整材料价格时，也不得调整承包价。在这种情况下，啊对对队可针对招标文件中的这一要约条件，向招标阿里巴巴集团控股有限公司提出，所供应的主要原材料的品种，规格和时间等必须保证工程的需要为保证条件，如若违约，索赔一半总标价。</反要约条件>
+	<招标单位意见><div xmlns="http://www.w3.org/1999/xhtml">阿里巴巴集团控股有限公司对啊对对队确认招标</div>
+<div xmlns="http://www.w3.org/1999/xhtml">签字：马云</div></招标单位意见>
+	<公证部门意见><div xmlns="http://www.w3.org/1999/xhtml">确认两公司投标与招标成功</div>
+<div xmlns="http://www.w3.org/1999/xhtml">证明合同</div>
+<div xmlns="http://www.w3.org/1999/xhtml">证明文件上的签名、印鉴属实</div>
+<div xmlns="http://www.w3.org/1999/xhtml">证明文件的副本、节本、译本、影印本与原本相符</div></公证部门意见>
+	<附件>
+		<分项报价明细表><div xmlns="http://www.w3.org/1999/xhtml">
+<table tabIndex="-1" class="msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 534px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" border="1">
+<colgroup>
+<col style="WIDTH: 178px"/>
+<col style="WIDTH: 178px"/>
+<col style="WIDTH: 178px"/></colgroup>
+<tbody>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">俞昊洋</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">项目经理</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">1000000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">吴昊</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">开发组组长</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">700000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">宋雪霞</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">保质组组组长</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">600000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">崔辰垚</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">配置组组长</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">600000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">张羿凡</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">系统分析</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">7000000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">徐伟</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">全栈开发</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">100000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 32.05pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">刘科宏</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">编程</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">7700000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 33pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">张子文</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">文档编写</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">1000000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 33pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">刘晨阳</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">单元测试</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">1000000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 33pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">周俊逸</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">测试</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">1000000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 33pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">吴浩涵</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">测试</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">1000000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 34.1pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">汪筱青</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">文档编写</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">1000000元</font></div></font></td></tr></tbody></table></div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></分项报价明细表>
+		<材料设备报价明细表><div xmlns="http://www.w3.org/1999/xhtml">200平米写字楼租金：200000元</div>
+<div xmlns="http://www.w3.org/1999/xhtml">电脑：300000元</div>
+<div xmlns="http://www.w3.org/1999/xhtml">网费：1000元</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></材料设备报价明细表>
+		<法定代表人授权书><div xmlns="http://www.w3.org/1999/xhtml">                法定代表人授权委托书 </div>
+<div xmlns="http://www.w3.org/1999/xhtml">本授权委托书声明:我(小花花）系(阿里巴巴集团控股有限公司)的法定代表人，现授权委托（啊对对队)(单位)(张羿凡)(姓名）全权负责办理商务平台开发及期相关事宜，代理人无转委托权，特此委托。</div></法定代表人授权书>
+		<资质证明文件><div xmlns="http://www.w3.org/1999/xhtml">1.【软件著作权】</div>
+<div xmlns="http://www.w3.org/1999/xhtml">2.【双软企业认定】软件产品认证、软件企业认证</div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">3.【软件行业能力资质（三标管理体系)】CMM/CMMI、ISO9000</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">4.【重点软件企业认定（国家区重点软件企业认定)】</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">5.【高新技术企业认定】</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml">6.【计算机信息系统集成资质】</div>
+<div xmlns="http://www.w3.org/1999/xhtml">7.【CISCO认证（网络安全:CCNA认证CCSP认证CCIE认证Ⅰ网络设计:CCNA认</div>
+<div xmlns="http://www.w3.org/1999/xhtml">8.【信息产业部安全服务资质】</div>
+<div xmlns="http://www.w3.org/1999/xhtml">9.【国家秘密的计算机信息系统集成资质】</div>
+<div xmlns="http://www.w3.org/1999/xhtml">10.【安全生产许可认证】</div></资质证明文件>
+		<保证金保函><div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体">投标保证金（银行保函）</font></div>
+<div><font size="2" face="宋体">鉴于 张羿凡 于2021年9月30日递交了电子商务平台的投标书。</font></div>
+<div><font size="2" face="宋体">在中华人民共和国北京注册经营的北京银行在此承担向张羿凡[业主名称]（以下称“业主”）支付总金额人民币100000000元的责任，本行及本行的继承人和受让人均承担此责任。</font></div>
+<div><font size="2" face="宋体">本行以公章签发本保函的日期为2021年10月1日。</font></div>
+<div><font size="2" face="宋体">本担保义务的条件是：</font></div>
+<ol style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type="1">
+<li class="MsoNormal">如果提交投标书后投标人须知前附表中规定的投标有效期或根据第15条延长的投标有效期内撤回其投标书；</li>
+<li class="MsoNormal">如果投标人在投标有效期内收到业主的中标通知书后；(1)不能或拒绝按投标人须知的要求(如果要求的话)签署合同协议书；或(2)不能或拒绝按投标人须知的规定提交履约保证金</li>
+<li class="MsoNormal">拒绝按投标人须知第27条对其计算错误进行修正。如果业主在书面要求中指明由于发生了上述条件内的任一情况而应该支付给业主的数额，则本行接到业主的第一次书面要求就支付上述数额之内的任何金额，并不需要业主证实他的要求。本保函在投标人须知中规定的投标有效期后或业主在这段时间内延长的投标有效期后二十八(28)天内(含28天)保持有效，本行不要求得到延长有效期的通知，但任何索款要求应在上述期限内送到本行。</li></ol>
+<div><font size="2" face="宋体">银行授权代表：张文兵       日期：2021年9月30日</font></div>
+<div><font size="2" face="宋体">证人：蒋玉茹</font></div></div></保证金保函>
+		<投标人情况表><div xmlns="http://www.w3.org/1999/xhtml">
+<table tabIndex="-1" class="msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 333.6pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" border="1">
+<colgroup>
+<col style="WIDTH: 110px"/>
+<col style="WIDTH: 35px"/>
+<col style="WIDTH: 130px"/>
+<col style="WIDTH: 5px"/>
+<col style="WIDTH: 55px"/>
+<col style="WIDTH: 70px"/>
+<col style="WIDTH: 5px"/>
+<col style="WIDTH: 146px"/></colgroup>
+<tbody>
+<tr style="MIN-HEIGHT: 37.4pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">投标人名称</font></div></font></td>
+<td colSpan="7" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">张羿凡</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 37.4pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">注册地址</font></div></font></td>
+<td colSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">北京</font></div></font></td>
+<td colSpan="3" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">邮政编码</font></div></font></td>
+<td colSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">100000</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 33.8pt">
+<td rowSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">联系方式</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">联系人</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">张羿凡</font></div></font></td>
+<td colSpan="4" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">电话</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">15711343042</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 22.65pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">传真</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">010-123456778</font></div></font></td>
+<td colSpan="4" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">网址</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">www.zyf.com</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 37.4pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">组织机构</font></div></font></td>
+<td colSpan="7" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">啊对对队</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 37.4pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">成立时间</font></div></font></td>
+<td colSpan="3" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">2021.9.30</font></div></font></td>
+<td colSpan="4" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">员工总人数：13人</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 37.4pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">法定代表人</font></div></font></td>
+<td colSpan="3" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">张羿凡</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">技术职称</font></div></font></td>
+<td colSpan="3" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">系统分析</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 37.4pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">技术负责人</font></div></font></td>
+<td colSpan="3" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">刘科宏</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">技术职称</font></div></font></td>
+<td colSpan="3" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">编程</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 40.65pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">经营范围</font></div></font></td>
+<td colSpan="7" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">软件开发</font></div></font></td></tr></tbody></table></div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></投标人情况表>
+		<投标人财务状况表><div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体"></font> </div></div>
+<div xmlns="http://www.w3.org/1999/xhtml">
+<table tabIndex="-1" class="msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 580px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" border="1">
+<colgroup>
+<col style="WIDTH: 145px"/>
+<col style="WIDTH: 145px"/>
+<col style="WIDTH: 145px"/>
+<col style="WIDTH: 145px"/></colgroup>
+<tbody>
+<tr style="MIN-HEIGHT: 51.35pt">
+<td rowSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">资产总额</font></div></font></td>
+<td rowSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">100000000000万</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">固定资产</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">50000000000万</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 51.35pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">流动资产</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">50000000000万</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 51.35pt">
+<td rowSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">负债总额</font></div></font></td>
+<td rowSpan="2" vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">10000元</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">长期负债</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">5000元</font></div></font></td></tr>
+<tr style="MIN-HEIGHT: 52.95pt">
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">流动负债</font></div></font></td>
+<td vAlign="top"><font size="2" face="宋体">
+<div><font size="2" face="宋体">5000元</font></div></font></td></tr></tbody></table></div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></投标人财务状况表>
+		<投标人专业技术人员一览表><div xmlns="http://www.w3.org/1999/xhtml">
+<div>
+<table tabIndex="-1" class="msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 518px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" border="1">
+<colgroup>
+<col style="WIDTH: 124px"/>
+<col style="WIDTH: 88px"/>
+<col style="WIDTH: 150px"/>
+<col style="WIDTH: 88px"/>
+<col style="WIDTH: 68px"/></colgroup>
+<tbody>
+<tr>
+<td vAlign="middle" style="BORDER-BOTTOM-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">人员</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">管理组</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">开发组</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">质保组</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">配置组</font></div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">俞昊洋</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">项目经理</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">（兼）</font></div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">吴昊</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">（兼）</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">组长（设计师）</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">宋雪霞</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">（兼）</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">组长</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">（兼）</font></div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">崔辰垚</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">（兼）</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">组长</font></div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">张羿凡</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">系统分析</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">徐伟</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">全栈开发</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">刘科宏</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">编程</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">张子文</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">文档撰写</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">刘晨阳</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">单元测试</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">周俊逸</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">测试</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">吴浩涵</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">测试</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr>
+<tr>
+<td vAlign="top"><font size="2" face="宋体">
+<p><font size="2" face="宋体">汪筱青</font></p></font></td>
+<td vAlign="middle" style="BORDER-LEFT-COLOR: "><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体">文档撰写</font></div></font></td>
+<td vAlign="middle"><font size="2" face="宋体">
+<div valign="baseline"><font size="2" face="宋体"></font> </div></font></td></tr></tbody></table></div></div></投标人专业技术人员一览表>
+		<其他>无</其他>
+	</附件>
+</投标书>
