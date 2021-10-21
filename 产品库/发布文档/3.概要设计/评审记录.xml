@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.6" PIVersion="1.0.0.0" href="file:///D:\教学\软件项目实践\网站\公开\教学资源\文档模板\《评审报告》模板.xsn" name="urn:schemas-microsoft-com:office:infopath:-4QU--Qo:" language="zh-cn" productVersion="15.0.0" ?><?mso-application progid="InfoPath.Document"?><评审报告 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<首部 项目名称="二手交易平台" 项目标识="线上市场" version="1.0">
+		<状态与版本信息>
+			<文件状态>正式发布</文件状态>
+			<文件标识>评审报告</文件标识>
+			<当前版本>v1.0.0</当前版本>
+			<作者>
+				<姓名>俞昊洋、宋雪霞、汪筱青</姓名>
+				<学号></学号>
+				<团队>啊对对队</团队>
+			</作者>
+			<完成日期>2021-10-20</完成日期>
+			<版本更新信息><div xmlns="http://www.w3.org/1999/xhtml">v1.0.0</div>
+<div xmlns="http://www.w3.org/1999/xhtml">完成了初次对于《概要设计说明文档》的审批，写下了评审记录</div></版本更新信息>
+		</状态与版本信息>
+	</首部>
+	<标题>评审记录</标题>
+	<组织名称>啊对对队</组织名称>
+	<评审种类>
+		<定期评审>1</定期评审>
+	</评审种类>
+	<主持人>俞昊洋</主持人>
+	<参加人>宋雪霞、汪筱青</参加人>
+	<地点>北京信息科技大学教学楼</地点>
+	<日期>2021-10-20</日期>
+	<提交内容><div xmlns="http://www.w3.org/1999/xhtml">啊对对队对于项目提交的《概要设计说明文档》进行内容评审</div>
+<div xmlns="http://www.w3.org/1999/xhtml">提交了会议评审记录报告</div></提交内容>
+	<评审项与结论>
+		<要素>基本设计概念和处理流程图</要素>
+		<评审结果><div xmlns="http://www.w3.org/1999/xhtml">评审了登录模块、购买模块、商品模块、动态管理模块、用户管理模块的流程图</div>
+<div xmlns="http://www.w3.org/1999/xhtml">流程图没有图注，导致理解困难</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></评审结果>
+		<问题和对策>建议对流程图添加文字注解</问题和对策>
+	<要素>接口设计</要素><评审结果><div xmlns="http://www.w3.org/1999/xhtml">评审了程序的接口设计</div>
+<div xmlns="http://www.w3.org/1999/xhtml">未发现明显问题</div></评审结果><问题和对策>无</问题和对策><要素>运行设计</要素><评审结果>运行设计中缺乏对于付款方式及流程的详细说明</评审结果><问题和对策>建议添加对于付款方式及流程的详细设计说明</问题和对策><要素>系统数据结构设计</要素><评审结果>数据库结构无明显问题，逻辑结构设计清晰，可运行程度高。</评审结果><问题和对策>无</问题和对策><要素>系统错误处理设计</要素><评审结果><div xmlns="http://www.w3.org/1999/xhtml">评审了错误处理部分，出错信息部分可加强。</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></评审结果><问题和对策><div xmlns="http://www.w3.org/1999/xhtml">建议添加用户进行不当操作时的警告部分。</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></问题和对策></评审项与结论>
+	<总结><div xmlns="http://www.w3.org/1999/xhtml">对概要设计说明书进行了评审</div>
+<div xmlns="http://www.w3.org/1999/xhtml">该说明书设计较为详细，对于某些细节部分掌握有待加强</div></总结>
+	<签字><div xmlns="http://www.w3.org/1999/xhtml">俞昊洋</div>
+<div xmlns="http://www.w3.org/1999/xhtml">宋雪霞</div>
+<div xmlns="http://www.w3.org/1999/xhtml">汪筱青</div></签字>
+	<附件>
+		<其他材料><div xmlns="http://www.w3.org/1999/xhtml">《概要设计说明文档》文件</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></其他材料>
+		<评审记录>无</评审记录>
+	</附件>
+</评审报告>
