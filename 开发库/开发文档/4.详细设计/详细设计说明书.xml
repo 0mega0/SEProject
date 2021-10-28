@@ -2,7 +2,7 @@
 	<首部 项目名称="二手交易平台" 项目标识="二手市场" version="1.0">
 		<状态与版本信息>
 			<文件状态>正式发布</文件状态>
-			<文件标识></文件标识>
+			<文件标识>详细设计文档</文件标识>
 			<当前版本>1.0</当前版本>
 			<作者>
 				<姓名>吴昊、徐伟、刘科宏、张羿凡、张子文、崔辰垚</姓名>
@@ -125,7 +125,7 @@
 <div><font size="2" face="宋体"></font> </div>
 <div><font size="2" face="宋体">1.用户表【user】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 425.4pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 531.75pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 140px"/>
 <col style="WIDTH: 155px"/>
@@ -228,7 +228,7 @@
 <div><font size="2" face="宋体"> 学生(id</font></div>
 <div><font size="2" face="宋体">2.商品表【goods】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 424.2pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 530.25pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 114px"/>
 <col style="WIDTH: 195px"/>
@@ -302,7 +302,7 @@
 <div><font size="2" face="宋体"></font> </div>
 <div><font size="2" face="宋体">3.购物车表【cart】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 424.2pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 530.25pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 155px"/>
 <col style="WIDTH: 78px"/>
@@ -358,7 +358,7 @@
 <div><font size="2" face="宋体"></font> </div>
 <div><font size="2" face="宋体">4.账单表【business】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 425.4pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 531.75pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 141px"/>
 <col style="WIDTH: 142px"/>
@@ -443,7 +443,7 @@
 <div><font size="2" face="宋体"></font> </div>
 <div><font size="2" face="宋体">5.评论表【comments】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 424.8pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 531pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 140px"/>
 <col style="WIDTH: 187px"/>
@@ -526,7 +526,7 @@
 <div><font size="2" face="宋体"></font> </div>
 <div><font size="2" face="宋体">6.申请表【aply】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 424.2pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 530.25pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 143px"/>
 <col style="WIDTH: 159px"/>
@@ -573,7 +573,7 @@
 <div><font size="2" face="宋体"></font> </div>
 <div><font size="2" face="宋体">7.管理员表【admin】</font></div></div>
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 424.8pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
+<table tabIndex="-1" class="MsoNormalTable msoUcTable" style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 531pt; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" borderColor="#000000" cellPadding="0" width="568" border="1">
 <colgroup>
 <col style="WIDTH: 149px"/>
 <col style="WIDTH: 206px"/>
