@@ -1,64 +1,88 @@
 <template>
   <div >
     <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
+      <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+      <el-row style="background-color: #e1e1e1;">
+    	  <el-col span="12" style="text-align: left;">
+    		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+    		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+    	  </el-col>
+    	  <el-col span="12" style="text-align: right;">
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+    	  </el-col>
+      </el-row>
     </div>
-      <el-container style="height: 700px; border: 1px solid #eee">
-<el-header  style="background-color: rgb(238, 241, 246)">
-            <p6 style="margin-left: 25px;height: 100px;font-size:22px;">店铺管理系统</p6>
-            <el-button  type="primary" style="margin-left: 500px" @click="allgood">全部宝贝</el-button>
-            <el-button  type="primary" @click="daifahuo" >待发货订单</el-button>
-            <el-button  type="primary" @click="tuikuan" >退款订单</el-button>
-            <el-button  type="primary" @click="yiwancheng" >已完成订单</el-button>
-            <el-button  type="primary" @click="goodmanage" >已下架商品</el-button>
-            <el-button  type="primary" @click="addgood">添加商品</el-button>
-        </el-header>
-        <el-main style="height:0;flex-grow:1;">
-            <el-table :data="tableData" border>
-                <el-table-column prop="id" label="用户ID" width="80">
-                </el-table-column>
-                <el-table-column prop="goodid" label="商品ID" width="80">
-                </el-table-column>
-                <el-table-column prop="name" label="商品名称" width="80">
-                </el-table-column>
-                <el-table-column prop="price" label="商品价格" width="90">
-                </el-table-column>
-                <el-table-column prop="intro" label="商品简介" width="160">
-                </el-table-column>
-                <el-table-column prop="newo" label="新旧程度/成" width="80">
-                </el-table-column>
-                <el-table-column prop="fenlei" label="商品类别" width="80" >
-                </el-table-column>
-                <el-table-column prop="count" label="购买数量" width="80" >
-                </el-table-column>
-                <el-table-column prop="address" label="我的地址" width="110" >
-                </el-table-column>
-                <el-table-column prop="time" label="下单时间" width="120" >
-                </el-table-column>
-                <el-table-column prop="imgUrl" label="商品图片" width="320" >
-                    <template slot-scope="scope">
-                        <el-carousel  style="width: 300px; height:300px" >
-                            <el-carousel-item v-for="i in scope.row.imgUrl" :key="i">
-                            <el-image style="width: 300px; height:300px"
-                                :src="i" ></el-image>
-                            </el-carousel-item>
-                        </el-carousel>
-                    </template>
-                </el-table-column>
-                <el-table-column prop="text" label="用户评论" width="170" >
-                    <template slot-scope="scope">
-                        <p>{{data[scope.$index]}}</p>
-                    </template>
-                </el-table-column>
-            </el-table>
-        </el-main>
-    </el-container>
-  </div>
+		<el-container style="height: 700px; margin-top: 20px;">
+			<el-aside width="150px"  style="background-color: rgb(96, 160, 255);text-align: center;">
+				<div style="font-size:30px; background-color: rgb(255, 255, 255);margin-top: 20px;" ><b>我的订单</b></div>
+				<el-menu
+					default-active="2"
+					background-color="#60a0ff"
+					active-text-color="#103cff"
+					>
+					<el-menu-item index="1">
+						<i class="el-icon-shopping-cart-1"></i>
+						<span slot="title"  @click="car">购物车</span>
+					</el-menu-item>
+					<el-menu-item index="2">
+						<i class="el-icon-wallet"></i>
+						<span slot="title" @click="shopmanage">已付款</span>
+					</el-menu-item>
+					<el-menu-item index="3">
+						<i class="el-icon-truck"></i>
+						<span slot="title" @click="goodmanage">待收货</span>
+					</el-menu-item>
+					<el-menu-item index="4">
+						<i class="el-icon-finished"></i>
+						<span slot="title" @click="shoplevel">已完成</span>
+					</el-menu-item>
+				</el-menu>
+			</el-aside>
+			<el-main style="height:0px;margin-left: auto;margin-right: auto;height: 700px;">
+				<el-table :data="tableData" border>
+					<el-table-column prop="id" label="用户ID" width="80">
+					</el-table-column>
+					<el-table-column prop="goodid" label="商品ID" width="80">
+					</el-table-column>
+					<el-table-column prop="name" label="商品名称" width="80">
+					</el-table-column>
+					<el-table-column prop="price" label="商品价格" width="90">
+					</el-table-column>
+					<el-table-column prop="intro" label="商品简介" width="160">
+					</el-table-column>
+					<el-table-column prop="newo" label="新旧程度/成" width="80">
+					</el-table-column>
+					<el-table-column prop="fenlei" label="商品类别" width="80" >
+					</el-table-column>
+					<el-table-column prop="count" label="购买数量" width="80" >
+					</el-table-column>
+					<el-table-column prop="address" label="我的地址" width="110" >
+					</el-table-column>
+					<el-table-column prop="time" label="下单时间" width="120" >
+					</el-table-column>
+					<el-table-column prop="imgUrl" label="商品图片" width="320" >
+						<template slot-scope="scope">
+							<el-carousel  style="width: 300px; height:300px" >
+								<el-carousel-item v-for="i in scope.row.imgUrl" :key="i">
+								<el-image style="width: 300px; height:300px"
+									:src="i" ></el-image>
+								</el-carousel-item>
+							</el-carousel>
+						</template>
+					</el-table-column>
+					<el-table-column prop="text" label="用户评论" width="170" >
+						<template slot-scope="scope">
+							<p>{{data[scope.$index]}}</p>
+						</template>
+					</el-table-column>
+				</el-table>
+			</el-main>
+		</el-container>
+	</div>
 </template>
 <script>
 export default {
@@ -70,6 +94,7 @@ export default {
       index: '',
       rows: '',
       column: '',
+	  logo: require('../assets/啊对对队.png'),
       data: []
     }
   },
@@ -144,7 +169,7 @@ export default {
           this.tableData = res.data
           for (let k = 0; k < this.tableData.length; k++) {
             for (let j = 0; j < this.tableData[k].imgUrl.length; j++) {
-              this.tableData[k].imgUrl[j] = require('C:/Users/13049/Pictures/good/' + this.tableData[k].imgUrl[j])
+              //this.tableData[k].imgUrl[j] = require('C:/Users/13049/Pictures/good/' + this.tableData[k].imgUrl[j])
             }
           }
           this.length = this.tableData.length
