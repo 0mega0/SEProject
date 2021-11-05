@@ -1,8 +1,8 @@
 package com.example.demo.Entity;
 
 public class User {
-	private String id;
-	private String word;
+	private String userId;
+	private String password;
 	private String name;
 	private String sex;
 	private String phone;
@@ -10,53 +10,22 @@ public class User {
 	private String city;
 	private String account;
 	private String status;
-	private String licence;
-	private String card;
+	private String shopLicence;
+	private String userCard;
 	private String money;
-	private String level;
-	private String grade;
-	
-	public String getLevel() {
-		return level;
+	private String shopLevel;
+	private String userGrade;
+	public String getUserId() {
+		return userId;
 	}
-	public void setLevel(String level) {
-		this.level = level;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public String getGrade() {
-		return grade;
+	public String getPassword() {
+		return password;
 	}
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
-	public String getMoney() {
-		return money;
-	}
-	public void setMoney(String money) {
-		this.money = money;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	public String getLicence() {
-		return licence;
-	}
-	public void setLicence(String licence) {
-		this.licence = licence;
-	}
-	public String getCard() {
-		return card;
-	}
-	public void setCard(String card) {
-		this.card = card;
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getName() {
 		return name;
@@ -64,11 +33,11 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getWord() {
-		return word;
+	public String getSex() {
+		return sex;
 	}
-	public void setWord(String word) {
-		this.word = word;
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 	public String getPhone() {
 		return phone;
@@ -94,12 +63,43 @@ public class User {
 	public void setAccount(String account) {
 		this.account = account;
 	}
-	public String getSex() {
-		return sex;
+	public String getStatus() {
+		return status;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setStatus(String status) {
+		this.status = status;
 	}
+	public String getShopLicence() {
+		return shopLicence;
+	}
+	public void setShopLicence(String shopLicence) {
+		this.shopLicence = shopLicence;
+	}
+	public String getUserCard() {
+		return userCard;
+	}
+	public void setUserCard(String userCard) {
+		this.userCard = userCard;
+	}
+	public String getMoney() {
+		return money;
+	}
+	public void setMoney(String money) {
+		this.money = money;
+	}
+	public String getShopLevel() {
+		return shopLevel;
+	}
+	public void setShopLevel(String shopLevel) {
+		this.shopLevel = shopLevel;
+	}
+	public String getUserGrade() {
+		return userGrade;
+	}
+	public void setUserGrade(String userGrade) {
+		this.userGrade = userGrade;
+	}
+	
 	
 	
 }

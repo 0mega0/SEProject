@@ -1,31 +1,31 @@
 package com.example.demo.Entity;
 
 public class Goods {
-	private String id;
-	private String goodid;
+	private String userId;
+	private String goodId;
 	private String name;
-	private String price;
-	private String zhekou;
+	private String goodPrice;
+	private String disacount;
 	private String intro;
-	private String newo;
-	private String fenlei;
+	private String newOrOld;
+	private String catelogue;
 	private String size;
-	private String yijia;
+	private String bargain;
 	private String amount;
 	private String imgUrl;
 	private String status;
-	private String shouchu;
-	public String getId() {
-		return id;
+	private String soldAmount;
+	public String getUserId() {
+		return userId;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public String getGoodid() {
-		return goodid;
+	public String getGoodId() {
+		return goodId;
 	}
-	public void setGoodid(String goodid) {
-		this.goodid = goodid;
+	public void setGoodId(String goodId) {
+		this.goodId = goodId;
 	}
 	public String getName() {
 		return name;
@@ -33,17 +33,17 @@ public class Goods {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPrice() {
-		return price;
+	public String getGoodPrice() {
+		return goodPrice;
 	}
-	public void setPrice(String price) {
-		this.price = price;
+	public void setGoodPrice(String goodPrice) {
+		this.goodPrice = goodPrice;
 	}
-	public String getZhekou() {
-		return zhekou;
+	public String getDisacount() {
+		return disacount;
 	}
-	public void setZhekou(String zhekou) {
-		this.zhekou = zhekou;
+	public void setDisacount(String disacount) {
+		this.disacount = disacount;
 	}
 	public String getIntro() {
 		return intro;
@@ -51,17 +51,17 @@ public class Goods {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public String getNewo() {
-		return newo;
+	public String getNewOrOld() {
+		return newOrOld;
 	}
-	public void setNewo(String newo) {
-		this.newo = newo;
+	public void setNewOrOld(String newOrOld) {
+		this.newOrOld = newOrOld;
 	}
-	public String getFenlei() {
-		return fenlei;
+	public String getCatelogue() {
+		return catelogue;
 	}
-	public void setFenlei(String fenlei) {
-		this.fenlei = fenlei;
+	public void setCatelogue(String catelogue) {
+		this.catelogue = catelogue;
 	}
 	public String getSize() {
 		return size;
@@ -69,11 +69,11 @@ public class Goods {
 	public void setSize(String size) {
 		this.size = size;
 	}
-	public String getYijia() {
-		return yijia;
+	public String getBargain() {
+		return bargain;
 	}
-	public void setYijia(String yijia) {
-		this.yijia = yijia;
+	public void setBargain(String bargain) {
+		this.bargain = bargain;
 	}
 	public String getAmount() {
 		return amount;
@@ -93,12 +93,12 @@ public class Goods {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getShouchu() {
-		return shouchu;
+	public String getSoldAmount() {
+		return soldAmount;
 	}
-	public void setShouchu(String shouchu) {
-		this.shouchu = shouchu;
+	public void setSoldOut(String soldAmount) {
+		this.soldAmount = soldAmount;
 	}
-	
+
 	
 }
