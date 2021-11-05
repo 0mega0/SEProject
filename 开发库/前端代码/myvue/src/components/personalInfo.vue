@@ -1,43 +1,84 @@
 <template>
 <div>
     <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
+      <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+      <el-row style="background-color: #e1e1e1;">
+    	  <el-col span="12" style="text-align: left;">
+    		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+    		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+    	  </el-col>
+    	  <el-col span="12" style="text-align: right;">
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+    	  </el-col>
+      </el-row>
     </div>
-  <div class="userinfo">
-    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" >
-       <el-form-item label="账号：" prop="id">
-        <el-input  :disabled="true" clearable v-model ="ruleForm.id" ></el-input>
-      </el-form-item>
-      <el-form-item label="姓名：" prop="name">
-        <el-input clearable v-model.trim ="ruleForm.name" placeholder="请输入姓名"></el-input>
-      </el-form-item>
-      <el-form-item label="性别：" prop="sex">
-        <el-input :disabled="true" clearable v-model.trim="ruleForm.sex" ></el-input>
-      </el-form-item>
-      <el-form-item label="手机号：" prop="phone">
-        <el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.phone" placeholder="请输入11位数字"></el-input>
-      </el-form-item>
-      <el-form-item label="邮箱：" prop="email">
-        <el-input clearable v-model.trim="ruleForm.email" placeholder="请输入邮箱"></el-input>
-      </el-form-item>
-      <el-form-item label="城市：" prop="city">
-        <el-input clearable v-model.trim="ruleForm.city" placeholder="请输入城市"></el-input>
-      </el-form-item>
-      <el-form-item label="银行卡号：" prop="account">
-        <el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.account" placeholder="请输入16位数字"></el-input>
-      </el-form-item>
-      <el-form-item prop="status">
-        <el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
-        <el-button v-if="this.ruleForm.status === '3'" v-model.trim="ruleForm.status" type="primary" @click="shopmanage">店铺管理</el-button>
-        <el-button v-if="this.ruleForm.status !== '3'" v-model.trim="ruleForm.status" type="primary" @click="shopregister">商家注册</el-button>
-      </el-form-item>
-    </el-form>
-  </div>
+	<div class="info">
+		<el-row>
+			<el-col span="7" class="name">
+				<div style="font-size: 75px; margin-top: 50px;">
+					<i class="el-icon-user-solid"></i>
+				</div>
+				<div style="font-size: 25px;">
+					<p><b>欢迎您！</b></p>
+					<p>{{ruleForm.id}}</p>
+				</div>
+				<el-button v-if="this.ruleForm.status === '3'" type="primary" @click="shopmanage" round>店铺管理</el-button>
+				<el-button v-if="this.ruleForm.status !== '3'" type="primary" @click="shopregister" round>商家注册</el-button>
+			</el-col>
+			<el-col span="17">
+				<el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" style="margin-top: 50px;">
+					<el-row>
+						<el-col span="8">
+							<el-form-item label="姓名：" prop="name">
+								<el-input clearable v-model.trim ="ruleForm.name" placeholder="请输入姓名"></el-input>
+							</el-form-item>
+						</el-col>
+						<el-col span="5">
+							<el-form-item label="性别：" prop="sex">
+								<el-input :disabled="true" clearable v-model.trim="ruleForm.sex" ></el-input>
+							</el-form-item>
+						</el-col>
+						<el-col span="10">
+							<el-form-item label="手机号：" prop="phone">
+								<el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.phone" placeholder="请输入11位数字"></el-input>
+							</el-form-item>
+						</el-col>
+					</el-row>
+					<el-row>
+						<el-col span="12">
+							<el-form-item label="邮箱：" prop="email">
+								<el-input clearable v-model.trim="ruleForm.email" placeholder="请输入邮箱"></el-input>
+							</el-form-item>
+						</el-col>
+						<el-col span="11">
+							<el-form-item label="城市：" prop="city">
+								<el-input clearable v-model.trim="ruleForm.city" placeholder="请输入城市"></el-input>
+							</el-form-item>
+						</el-col>
+					</el-row>
+					<el-row>
+						<el-col span="14">
+							<el-form-item label="银行卡号：" prop="account">
+								<el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.account" placeholder="请输入16位数字"></el-input>
+							</el-form-item>
+						</el-col>
+						<el-col span="7" style="text-align: center;">
+							<el-form-item prop="status">
+								<el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
+							</el-form-item>
+						</el-col>
+					</el-row>
+				</el-form>
+			</el-col>
+		</el-row>
+	</div>
+	<div class="userinfo">
+		
+	  </div>
 </div>
 </template>
 <script>
@@ -53,6 +94,7 @@ export default {
     return {
       userid: '',
       userword: '',
+	  logo: require('../assets/啊对对队.png'),
       ruleForm: {
         status: '',
         email: '',
@@ -61,7 +103,8 @@ export default {
         name: '',
         account: '',
         city: '',
-        id: ''
+        id: 'aaa',
+		
       },
       rules: {
         name: [
@@ -170,14 +213,28 @@ export default {
 }
 </script>
 <style type="text/css">
-.userinfo{
-position: absolute;/*绝对定位*/
-width: 300px;
-height: 150px;
-text-align: center;/*(让div中的内容居中)*/
-top: 50%;
-left: 50%;
-margin-top: -300px;
-margin-left: -150px;
-}
+	.userinfo{
+		width: 300px;
+		height: 150px;
+		text-align: center;/*(让div中的内容居中)*/
+		top: 50%;
+		left: 50%;
+		
+	}
+	.info{
+		margin-top: 30px;
+		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+		height: 350px;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.name{
+		height: 390px;
+		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+		margin-top: -20px;
+		background-color: #3974a7;
+		text-align: center;
+		color: #ffffff;
+	}
 </style>

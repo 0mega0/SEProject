@@ -1,12 +1,20 @@
 <template>
   <div>
     <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
+      <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+      <el-row style="background-color: #e1e1e1;">
+    	  <el-col span="12" style="text-align: left;">
+    		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+    		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+    	  </el-col>
+    	  <el-col span="12" style="text-align: right;">
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+    	  </el-col>
+      </el-row>
     </div>
   <div class="addgood">
     <div class="left">
@@ -97,40 +105,41 @@ export default {
       }
     }
     return {
-      fileList: [],
-      userid: '',
-      userword: '',
-      form: {
-        size: '',
-        new: 10,
-        name: '',
-        zhekou: 10.0,
-        fenlei: '',
-        intro: '',
-        price: '',
-        amount: 1,
-        yijia: ''
-      },
-      rules: {
-        yijia: [
-          { validator: check, trigger: 'blur' }
-        ],
-        name: [
-          { validator: checkKong, trigger: 'blur' }
-        ],
-        price: [
-          { validator: checkKong, trigger: 'blur' }
-        ],
-        intro: [
-          { validator: checkKong, trigger: 'blur' }
-        ],
-        fenlei: [
-          { validator: checkKong, trigger: 'blur' }
-        ],
-        size: [
-          { validator: checkKong, trigger: 'blur' }
-        ]
-      }
+		fileList: [],
+		userid: '',
+		userword: '',
+		logo: require('../assets/啊对对队.png'),
+		form: {
+		size: '',
+		new: 10,
+		name: '',
+		zhekou: 10.0,
+		fenlei: '',
+		intro: '',
+		price: '',
+		amount: 1,
+		yijia: ''
+		},
+		rules: {
+		yijia: [
+		  { validator: check, trigger: 'blur' }
+		],
+		name: [
+		  { validator: checkKong, trigger: 'blur' }
+		],
+		price: [
+		  { validator: checkKong, trigger: 'blur' }
+		],
+		intro: [
+		  { validator: checkKong, trigger: 'blur' }
+		],
+		fenlei: [
+		  { validator: checkKong, trigger: 'blur' }
+		],
+		size: [
+		  { validator: checkKong, trigger: 'blur' }
+		]
+		}
     }
   },
   mounted () {

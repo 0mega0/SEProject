@@ -1,63 +1,99 @@
 <template>
   <div >
     <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
+      <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+      <el-row style="background-color: #e1e1e1;">
+    	  <el-col span="12" style="text-align: left;">
+    		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+    		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+    	  </el-col>
+    	  <el-col span="12" style="text-align: right;">
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+    		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+    	  </el-col>
+      </el-row>
     </div>
       <el-container style="height: 700px; border: 1px solid #eee">
-        <el-header  style="background-color: rgb(238, 241, 246)">
-            <p6 style="margin-left: 25px;height: 100px;font-size:22px;">后台管理审核系统</p6>
-            <el-button  type="primary" style="margin-left: 600px" @click="usermanage">用户注册审核</el-button>
-            <el-button  type="primary" @click="shopmanage" >商家注册审核</el-button>
-            <el-button  type="primary" @click="goodmanage" >上架商品审核</el-button>
-            <el-button  type="primary" @click="shoplevel" >商家等级管理</el-button>
+        <el-header  style="background-color: #60a0ff;text-align: center;">
+            <p6 style="font-size:30px;"><b>后台管理审核系统</b></p6>
         </el-header>
-        <el-main style="height:0;flex-grow:1;">
-            <el-col :span="3">
-            <el-input style="margin-left: 910px" width="120" v-model="search" v-on:input ="inputFunc" clearable="true" placeholder="输入关键字搜索"/>
-            </el-col>
-            <el-button style="margin-left: 960px" type="primary" @click="clear">全部</el-button>
-            <el-table :data="tableData.slice((currentPage - 1) * pageSize, currentPage*pageSize)"
-            @row-click="openDetails" border>
-                <el-table-column prop="id" label="用户id" width="140">
-                </el-table-column>
-                <el-table-column prop="word" label="密码" width="140">
-                </el-table-column>
-                <el-table-column prop="name" label="姓名" width="140">
-                </el-table-column>
-                <el-table-column prop="sex" label="性别" width="100">
-                </el-table-column>
-                <el-table-column prop="phone" label="手机号" width="180">
-                </el-table-column>
-                <el-table-column prop="email" label="邮箱" width="180">
-                </el-table-column>
-                <el-table-column prop="city" label="城市" width="140">
-                </el-table-column>
-                <el-table-column prop="account" label="银行账户" width="230">
-                </el-table-column>
-                <el-table-column  width="200" label="操作">
-                    <template slot-scope="scope">
-                        <el-button size="mini" type="primary" @click.native.prevent="deleteRow(scope.$index, tableData)">允许登录</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
-        </el-main>
-        <el-footer>
-            <el-pagination
-                @size-change="sizechange"
-                @current-change="currentchange"
-                style="margin-left: 1010px"
-                background
-                :current-page="currentPage"
-                :page-size="pageSize"
-                layout="prev, pager, next"
-                :total="length">
-            </el-pagination>
-        </el-footer>
+		<el-container>
+			<el-aside width="200px">
+				<el-menu
+					default-active="1"
+					class="el-menu-vertical-demo"
+					style="height: 700px;"
+					>
+					<el-menu-item index="1">
+						<span slot="title" @click="usermanage">用户注册审核</span>
+					</el-menu-item>
+					<el-menu-item index="2">
+						<span slot="title" @click="shopmanage">商家注册审核</span>
+					</el-menu-item>
+					<el-menu-item index="3">
+						<span slot="title" @click="goodmanage">上架商品审核</span>
+					</el-menu-item>
+					<el-menu-item index="4">
+						<span slot="title" @click="shoplevel">商家等级管理</span>
+					</el-menu-item>
+				</el-menu>
+			</el-aside>
+			<el-container>
+				<el-main>
+					<el-table :data="tableData.slice((currentPage - 1) * pageSize, currentPage*pageSize)"
+					@row-click="openDetails" border>
+						<el-table-column prop="id" label="用户id" width="140">
+						</el-table-column>
+						<el-table-column prop="word" label="密码" width="140">
+						</el-table-column>
+						<el-table-column prop="name" label="姓名" width="140">
+						</el-table-column>
+						<el-table-column prop="sex" label="性别" width="100">
+						</el-table-column>
+						<el-table-column prop="phone" label="手机号" width="170">
+						</el-table-column>
+						<el-table-column prop="email" label="邮箱" width="160">
+						</el-table-column>
+						<el-table-column prop="city" label="城市" width="100">
+						</el-table-column>
+						<el-table-column prop="account" label="银行账户" width="210">
+						</el-table-column>
+						<el-table-column  width="150px" label="操作">
+							<template slot-scope="scope">
+								<el-button size="mini" type="primary" @click.native.prevent="deleteRow(scope.$index, tableData)">允许登录</el-button>
+							</template>
+						</el-table-column>
+						<el-table-column align="right" >
+							<template slot="header" slot-scope="scope">
+								<el-row>
+									<el-col span="18">
+										<el-input width="120" v-model="search" v-on:input ="inputFunc" clearable="true" placeholder="输入关键字搜索"/>
+									</el-col>
+									<el-col span="4">
+										<el-button type="primary" @click="clear">全部</el-button>
+									</el-col>
+								</el-row>
+							</template>
+						</el-table-column>
+					</el-table>
+				</el-main>
+				<el-footer>
+					<el-pagination
+						@size-change="sizechange"
+						@current-change="currentchange"
+						style="text-align: center;"
+						background
+						:current-page="currentPage"
+						:page-size="pageSize"
+						layout="prev, pager, next"
+						:total="length">
+					</el-pagination>
+				</el-footer>
+			</el-container>
+		</el-container>
     </el-container>
     <el-dialog
       title="提示"
@@ -87,7 +123,8 @@ export default {
       column: '',
       table: [],
       userid: '',
-      userword: ''
+      userword: '',
+	  logo: require('../assets/啊对对队.png')
     }
   },
   mounted () {
