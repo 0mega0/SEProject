@@ -1,61 +1,118 @@
 <template>
     <div class="div">
       <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
-    </div>
-      <div>
-        <div class="block">
-          <el-carousel  style="width: 300px; height:800px">
-            <el-carousel-item v-for="i in this.table[0].imgUrl" :key="i">
-              <el-image style="width: 300px; height:300px"
-                        :src="i" ></el-image>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-        <div class="info">
-          <p style="font-size:25px">商品名称:{{this.table[0].name}}</p>
-          <p style="font-size:25px">{{this.table[0].intro}}</p>
-          <p style="color:red; font-size:25px">原价:¥{{this.table[0].price}}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现价:¥{{this.table[0].price*this.table[0].zhekou/10}}</p>
-          <p >折扣：{{this.table[0].zhekou}}</p>
-          <p>新旧程度：{{this.table[0].newo}}</p>
-          <p>是否议价：{{this.table[0].yijia}}</p>
-          <p>商品尺寸：{{this.table[0].size}}</p>
-          <p>销量：{{this.table[0].shouchu}}</p>
-          <p>库存：{{this.table[0].amount}}</p>
-          <el-input-number v-model="count" @change="handleChange" :min="1"  label="描述文字"></el-input-number>
-          <el-button  style="margin-left: 20px; background-color:red" type="primary" @click="add">加入购物车</el-button>
-        </div>
+        <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+        <el-row style="background-color: #e1e1e1;">
+      	  <el-col span="12" style="text-align: left;">
+      		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+      		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+      	  </el-col>
+      	  <el-col span="12" style="text-align: right;">
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+      	  </el-col>
+        </el-row>
       </div>
-      <div class="aaa" id="box">
-          <span>评论区：</span>
-          <ul v-for="item in data" :key="item">
-      <li>
-          <p>用户：{{item.id}}</p>
-      </li>
-      <li>
-           <p>评论：{{item.text}}</p>
-      </li>
-      <li>
-          <el-rate v-model="item.rate" show-text disabled style="margin-top:20px"> </el-rate>
-      </li>
-    </ul>
-    </div>
+		<el-row>
+			<el-col class="block" :span="12">
+			  <el-carousel  height="300px" style="margin-right: 20px;width:300px;float: right;" :autoplay="false">
+				<el-carousel-item v-for="i in this.table[0].imgUrl" :key="i" >
+				  <el-image style="width: 300px; height:300px"
+							:src="i" ></el-image>
+				</el-carousel-item>
+			  </el-carousel>
+			</el-col>
+			<el-col class="info" :span="12">
+				<p style="font-size:25px">商品名称:{{this.table[0].name}}</p>
+				<p style="font-size:25px">{{this.table[0].intro}}</p>
+				<p style="color:red; font-size:25px">原价:<span style="text-decoration: line-through">¥{{this.table[0].price}}</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现价:¥{{this.table[0].price*this.table[0].zhekou/10}}</p>
+				<el-row>
+					<el-col :span="5">折扣：{{this.table[0].zhekou}}</el-col>
+					<el-col :span="12">新旧程度：{{this.table[0].newo}}</el-col>
+				</el-row>
+				<el-row>
+					<el-col :span="5">是否议价：{{this.table[0].yijia}}</el-col>
+					<el-col :span="12">商品尺寸：{{this.table[0].size}}</el-col>
+				</el-row>
+				<p>销量：{{this.table[0].shouchu}}</p>
+				<p>库存：{{this.table[0].amount}}</p>
+				<el-input-number v-model="count" @change="handleChange" :min="1"  label="描述文字"></el-input-number>
+				<el-button  style="margin-left: 20px; background-color:red" type="primary" @click="add">加入购物车</el-button>
+			</el-col>
+		</el-row>
+		<el-divider>评论区</el-divider>
+		<div class="aaa" id="box">
+			<ul v-for="item in data" :key="item" style="box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)">
+				<li>
+					<p>用户：{{item.id}}</p>
+				</li>
+				<li>
+					<p>评论：{{item.text}}</p>
+				</li>
+				<li style="text-align: right;">
+					<el-rate v-model="item.rate" show-text disabled style="margin-top:20px"> </el-rate>
+				</li>
+			</ul>
+		</div>
     </div>
 </template>
 <script>
 export default {
   data () {
     return {
-      userid: '',
-      userword: '',
-      data: [],
-      table: [],
+		userid: '',
+		userword: '',
+		data: [
+			{
+				id:"aaaa",
+				text:"noaoaod百度表白地位不代表带不带我把我的",
+				rate:4,
+			},
+			{
+				id:"aaaa",
+				text:"noaoaod百度表白地位不代表带不带我把我的",
+				rate:4,
+			},
+			{
+				id:"aaaa",
+				text:"noaoaod百度表白地位不代表带不带我把我的",
+				rate:4,
+			},
+			{
+				id:"aaaa",
+				text:"noaoaod百度表白地位不代表带不带我把我的",
+				rate:4,
+			},
+			{
+				id:"aaaa",
+				text:"noaoaod百度表白地位不代表带不带我把我的",
+				rate:4,
+			},
+			{
+				id:"aaaa",
+				text:"noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的noaoaod百度表白地位不代表带不带我把我的",
+				rate:4,
+			},
+		],
+		logo: require('../assets/啊对对队.png'),
+		table: [
+			{
+				imgUrl:"aaaa",
+				name:"asd",
+				intro:"asdwda",
+				price:1000,
+				zhekou:5,
+				newo:"旧",
+				yijia:"是",
+				size:"大",
+				shouchu:100000,
+				amount:100,
+			},
+		],
       str: [],
       count: 1,
       u: '',
@@ -146,7 +203,7 @@ export default {
           this.table = res.data
           for (let k = 0; k < this.table.length; k++) {
             for (let j = 0; j < this.table[k].imgUrl.length; j++) {
-              this.table[k].imgUrl[j] = require('C:/Users/13049/Pictures/good/' + this.table[k].imgUrl[j])
+              //this.table[k].imgUrl[j] = require('C:/Users/13049/Pictures/good/' + this.table[k].imgUrl[j])
             }
           }
           this.max = this.table[0].amount
@@ -191,15 +248,12 @@ export default {
 }
 .block {
   margin-top: 50px;
-  margin-left: 300px;
-  float: left;
-  width: 300px;
-  height: 500px;
+  height: 350px;
+  text-align: right;
 }
 .info {
   margin-top: 30px;
-  margin-left: 50px;
-  float: left;
+  text-align: left;
 }
   .el-header {
     background-color: #B3C0D1;
@@ -208,10 +262,8 @@ export default {
     line-height: 60px;
   }
   .aaa{
-    margin-top:600px;
-
- position:absolute;
-
- left:45%
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
   }
 </style>

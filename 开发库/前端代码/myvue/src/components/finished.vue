@@ -1,21 +1,21 @@
 <template>
-  <div >
-    <div>
-      <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
-      <el-row style="background-color: #e1e1e1;">
-    	  <el-col span="12" style="text-align: left;">
-    		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
-    		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
-    	  </el-col>
-    	  <el-col span="12" style="text-align: right;">
-    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
-    		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
-    		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
-    		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
-    		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
-    	  </el-col>
-      </el-row>
-    </div>
+	<div>
+		<div>
+		  <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+		  <el-row style="background-color: #e1e1e1;">
+			  <el-col span="12" style="text-align: left;">
+				  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+				  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+			  </el-col>
+			  <el-col span="12" style="text-align: right;">
+				<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+				<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+				<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+				<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+				<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+			  </el-col>
+		  </el-row>
+		</div>
 		<el-container style="height: 700px; margin-top: 20px;">
 			<el-aside width="150px"  style="background-color: rgb(96, 160, 255);text-align: center;">
 				<div style="font-size:30px; background-color: rgb(255, 255, 255);margin-top: 20px;" ><b>我的订单</b></div>
@@ -42,7 +42,7 @@
 					</el-menu-item>
 				</el-menu>
 			</el-aside>
-			<el-main style="height:0px;margin-left: auto;margin-right: auto;height: 700px;">
+			<el-main style="margin-left: auto;margin-right: auto;">
 				<el-table :data="tableData" border>
 					<el-table-column prop="id" label="用户ID" width="80">
 					</el-table-column>
