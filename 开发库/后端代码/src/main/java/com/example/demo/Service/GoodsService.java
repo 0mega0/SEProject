@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import com.example.demo.Dao.GoodsDao;
 import com.example.demo.Entity.Goods;
 
+/**
+ * @author Alex,0mega_0,Scarlet_sky
+ * last change 2021/11/5
+ */
+
 @Service
 public class GoodsService {
 	@Autowired //连接到UserDao Bean

@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Entity.comment;
+import com.example.demo.Entity.Comment;
 import com.example.demo.Service.CommentService;
+
+/**
+ * @author Alex,0mega_0
+ * last change 2021/11/5
+ */
 
 @CrossOrigin
 @RestController
@@ -34,7 +39,7 @@ public class CommentController {
 	}
 	
 	@RequestMapping(value = "/comment",method = RequestMethod.POST)
-    public List<comment> getcomment(String goodid){  //获取商品评价
+    public List<Comment> getcomment(String goodid){  //获取商品评价
     	return c.getcomment(goodid);
     }
     

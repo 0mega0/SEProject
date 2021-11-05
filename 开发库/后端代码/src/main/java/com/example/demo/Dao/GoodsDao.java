@@ -12,6 +12,11 @@ import org.apache.ibatis.annotations.Update;
 import com.example.demo.Entity.Goods;
 import com.example.demo.Entity.User;
 
+/**
+ * @author Alex,0mega_0,Scarlet_sky
+ * last change 2021/11/5
+ */
+
 @Mapper
 public interface GoodsDao {
 	@Results({

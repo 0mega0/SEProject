@@ -1,23 +1,22 @@
 package com.example.demo.Entity;
 
+/**
+ * @author Alex,0mega_0,Scarlet_sky
+ * last change 2021/11/5
+ */
+
 public class Car {
 	private String id;
-	private String shopid;
-	private String goodid;
+	private String shopId;
+	private String goodId;
 	private String name;
-	public String getShopid() {
-		return shopid;
-	}
-	public void setShopid(String shopid) {
-		this.shopid = shopid;
-	}
 	private String price;
-	private String zhekou;
+	private String discount;
 	private String intro;
-	private String newo;
-	private String fenlei;
+	private String newOrOld;
+	private String catalogue;
 	private String size;
-	private String yijia;
+	private String bargain;
 	private String count;
 	private String amount;
 	private String imgUrl;
@@ -26,7 +25,13 @@ public class Car {
 	private String phone;
 	private String uname;
 	private String address;
-	
+
+	public String getShopId() {
+		return shopId;
+	}
+	public void setShopId(String shopId) {
+		this.shopId = shopId;
+	}
 	public String getAddress() {
 		return address;
 	}
@@ -57,11 +62,11 @@ public class Car {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getGoodid() {
-		return goodid;
+	public String getGoodId() {
+		return goodId;
 	}
-	public void setGoodid(String goodid) {
-		this.goodid = goodid;
+	public void setGoodId(String goodId) {
+		this.goodId = goodId;
 	}
 	public String getName() {
 		return name;
@@ -75,11 +80,11 @@ public class Car {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public String getZhekou() {
-		return zhekou;
+	public String getDiscount() {
+		return discount;
 	}
-	public void setZhekou(String zhekou) {
-		this.zhekou = zhekou;
+	public void setDiscount(String discount) {
+		this.discount = discount;
 	}
 	public String getIntro() {
 		return intro;
@@ -87,17 +92,17 @@ public class Car {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public String getNewo() {
-		return newo;
+	public String getNewOrOld() {
+		return newOrOld;
 	}
-	public void setNewo(String newo) {
-		this.newo = newo;
+	public void setNewOrOld(String newOrOld) {
+		this.newOrOld = newOrOld;
 	}
-	public String getFenlei() {
-		return fenlei;
+	public String getCatalogue() {
+		return catalogue;
 	}
-	public void setFenlei(String fenlei) {
-		this.fenlei = fenlei;
+	public void setCatalogue(String catalogue) {
+		this.catalogue = catalogue;
 	}
 	public String getSize() {
 		return size;
@@ -105,13 +110,12 @@ public class Car {
 	public void setSize(String size) {
 		this.size = size;
 	}
-	public String getYijia() {
-		return yijia;
+	public String getBargain() {
+		return bargain;
 	}
-	public void setYijia(String yijia) {
-		this.yijia = yijia;
+	public void setBargain(String bargain) {
+		this.bargain = bargain;
 	}
-	
 	public String getImgUrl() {
 		return imgUrl;
 	}
@@ -130,12 +134,11 @@ public class Car {
 	public void setCount(String count) {
 		this.count = count;
 	}
-	
 	public String getAmount() {
 		return amount;
 	}
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	
+
 }

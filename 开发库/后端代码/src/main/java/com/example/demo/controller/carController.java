@@ -16,6 +16,11 @@ import com.example.demo.Service.GoodsService;
 import com.example.demo.Service.CarService;
 import com.example.demo.Service.UserService;
 
+/**
+ * @author Alex,0mega_0
+ * last change 2021/11/5
+ */
+
 @CrossOrigin
 @RestController
 public class CarController {
@@ -25,16 +30,23 @@ public class CarController {
 	private UserService u;
 	@Autowired
 	private GoodsService g;
-	
+
+	/**
+	 * 向购物车添加商品
+	 *
+	 * @param id   用户ID
+	 * @param word 用户密码
+	 * @return parameter登录角色
+	 */
 	@RequestMapping(value = "/addCar",method = RequestMethod.POST)
-	public void addgood(String id,String word,String shopid,String goodid,String name,String price,String intro,String newo,String fenlei,
+	public void addgood(String id,String word,String shopId,String goodId,String name,String price,String intro,String newOrOld,String catalogue,
 			String size,String yijia,String count,String amount,String imgUrl) {
 		if(u.getUser(id, word).size() > 0) {
-			if(c.getCar(id, goodid).size() > 0) {
-				int s = Integer.parseInt(count) + Integer.parseInt(c.getCar(id, goodid).get(0).getCount());
-				c.updatecount(id, goodid, String.valueOf(s));
+			if(c.getCar(id, goodId).size() > 0) {
+				int s = Integer.parseInt(count) + Integer.parseInt(c.getCar(id, goodId).get(0).getCount());
+				c.updateCount(id, goodId, String.valueOf(s));
 			}else {
-				c.addCar(id,shopid, goodid, name, price, intro, newo, fenlei, size, yijia, count, amount,imgUrl);
+				c.addCar(id,shopId, goodId, name, price, intro, newOrOld, catalogue, size, yijia, count, amount,imgUrl);
 			}
 		}
 	}
@@ -50,14 +62,14 @@ public class CarController {
 	@RequestMapping(value = "/dgoodcar",method = RequestMethod.POST)
 	public void dgoodcar(String id,String word,String goodid){  //从购物车删除商品
 		if(u.getUser(id, word).size() > 0) {
-			c.dgoodCar(id, goodid);
+			c.deleteGoodFromCar(id, goodid);
 		}
 	}
 	
 	@RequestMapping(value = "/changecount",method = RequestMethod.POST)
 	public void changeCount(String id, String word, String goodid, String count){  //从购物车删除商品
 		if(u.getUser(id, word).size() > 0) {
-			c.updatecount(id, goodid, count);
+			c.updateCount(id, goodid, count);
 		}
 	}
 	
@@ -98,7 +110,7 @@ public class CarController {
 			return "下单时间超过24小时，无法申请退款！";
 		}
 		if(u.getUser(id, word).size() > 0) {
-			c.tuikuan(id, goodid);
+			c.drawback(id, goodid);
 		}
 		return "申请退款成功，请等待商家进行审核！";
 	}
@@ -106,7 +118,7 @@ public class CarController {
 	@RequestMapping(value = "/sendgood",method = RequestMethod.POST)
 	public List<Car> sendgood(String id,String word){  //商家待发货
 		if(u.getUser(id, word).get(0).getStatus().equals("3")) {
-			return c.sendgood(id, "2");
+			return c.getGoodToBeSend(id, "2");
 		}
 		return null;
 	}
@@ -114,7 +126,7 @@ public class CarController {
 	@RequestMapping(value = "/fahuo",method = RequestMethod.POST)
 	public String fahuo(String id,String shopid,String word,String goodid){  //商家确认发货
 		if(u.getUser(shopid, word).size() > 0) {
-			 c.fahuo(id, shopid, goodid, "4");
+			 c.sendGood(id, shopid, goodid, "4");
 		}
 		return null;
 	}

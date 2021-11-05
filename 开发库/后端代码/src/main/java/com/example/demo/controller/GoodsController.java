@@ -18,6 +18,11 @@ import com.example.demo.Service.GoodsService;
 import com.example.demo.Service.CarService;
 import com.example.demo.Service.UserService;
 
+/**
+ * @author Alex,Scarlet_sky
+ * last change 2021/11/5
+ */
+
 @CrossOrigin
 @RestController
 public class GoodsController {
@@ -52,8 +57,6 @@ public class GoodsController {
 	public String addGood(@RequestParam(value = "file", required = false) MultipartFile[] file, String userId, String password,
 			String name, String price, String discount, String intro, String newOrOld, String catalogue, String size,
 			String bargain, String amount) throws IllegalStateException, IOException { // 商家上架新商品
-		// System.out.println(id);
-		// System.out.println(amount);
 		if (userService.getUser(userId, password).size() < 1) {
 			return "fail";
 		} else if (!userService.getUser(userId, password).get(0).getStatus().equals("3")) {
@@ -218,7 +221,7 @@ public class GoodsController {
 	public void changeAmount(String id, String word, String goodid, String amount) {
 		if (userService.getUser(id, word).size() > 0) {
 			goodsService.changeAmount(id, goodid, amount);
-			carService.changeamount(id, goodid, amount);
+			carService.amountChange(id, goodid, amount);
 		}
 	}
 
@@ -236,7 +239,7 @@ public class GoodsController {
 		//System.out.println(newprice);
 		if (userService.getUser(id, word).size() > 0) {
 			goodsService.changeprice(goodid, price);
-			carService.changeprice(id, goodid, newprice);
+			carService.priceChange(id, goodid, newprice);
 		}
 	}
 
@@ -253,7 +256,7 @@ public class GoodsController {
 	public void changeDiscount(String id, String word, String goodId, String discount, String price) {
 		if (userService.getUser(id, word).size() > 0) {
 			goodsService.changeDisacount(goodId, discount);
-			carService.changeprice(id, goodId, price);
+			carService.priceChange(id, goodId, price);
 		}
 	}
 

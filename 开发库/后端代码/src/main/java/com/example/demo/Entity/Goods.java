@@ -1,5 +1,10 @@
 package com.example.demo.Entity;
 
+/**
+ * @author Alex,Scarlet_sky,0mega_0
+ * last change 2021/11/5
+ */
+
 public class Goods {
 	private String userId;
 	private String goodId;

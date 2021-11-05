@@ -1,8 +1,13 @@
 package com.example.demo.Entity;
 
-public class comment {
+/**
+ * @author Alex,0mega_0,Scarlet_sky
+ * last change 2021/11/5
+ */
+
+public class Comment {
 	private String id;
-	private String goodid;
+	private String goodId;
 	private String text;
 	private String rate;
 	
@@ -12,11 +17,11 @@ public class comment {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getGoodid() {
-		return goodid;
+	public String getGoodId() {
+		return goodId;
 	}
-	public void setGoodid(String goodid) {
-		this.goodid = goodid;
+	public void setGoodId(String goodId) {
+		this.goodId = goodId;
 	}
 	public String getText() {
 		return text;

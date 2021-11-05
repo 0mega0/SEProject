@@ -20,6 +20,11 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.Entity.User;
 import com.example.demo.Service.UserService;
 
+/**
+ * @author Alex,Scarlet_sky
+ * last change 2021/11/5
+ */
+
 @CrossOrigin
 @RestController
 public class UserController { // 用户控制器
