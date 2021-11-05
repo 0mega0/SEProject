@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Entity.car;
+import com.example.demo.Entity.Car;
 import com.example.demo.Service.GoodsService;
 import com.example.demo.Service.CarService;
 import com.example.demo.Service.UserService;
 
 @CrossOrigin
 @RestController
-public class carController {
+public class CarController {
 	@Autowired //自动连接到UserService Bean
     private CarService c;
 	@Autowired
@@ -29,23 +29,23 @@ public class carController {
 	@Autowired
 	private GoodsService g;
 	
-	@RequestMapping(value = "/addcar",method = RequestMethod.POST)
+	@RequestMapping(value = "/addCar",method = RequestMethod.POST)
 	public void addgood(String id,String word,String shopid,String goodid,String name,String price,String intro,String newo,String fenlei,
 			String size,String yijia,String count,String amount,String imgUrl) {
 		if(u.getUser(id, word).size() > 0) {
-			if(c.getcar(id, goodid).size() > 0) {
-				int s = Integer.parseInt(count) + Integer.parseInt(c.getcar(id, goodid).get(0).getCount());
+			if(c.getCar(id, goodid).size() > 0) {
+				int s = Integer.parseInt(count) + Integer.parseInt(c.getCar(id, goodid).get(0).getCount());
 				c.updatecount(id, goodid, String.valueOf(s));
 			}else {
-				c.addcar(id,shopid, goodid, name, price, intro, newo, fenlei, size, yijia, count, amount,imgUrl);
+				c.addCar(id,shopid, goodid, name, price, intro, newo, fenlei, size, yijia, count, amount,imgUrl);
 			}
 		}
 	}
 	
 	@RequestMapping(value = "/car",method = RequestMethod.POST)
-	public List<car> car(String id,String word){  //用户购物车的所有商品
+	public List<Car> car(String id,String word){  //用户购物车的所有商品
 		if(u.getUser(id, word).size() > 0) {
-			return c.car(id,"1");
+			return c.Car(id,"1");
 		}
 		return null;
 	}
@@ -53,7 +53,7 @@ public class carController {
 	@RequestMapping(value = "/dgoodcar",method = RequestMethod.POST)
 	public void dgoodcar(String id,String word,String goodid){  //从购物车删除商品
 		if(u.getUser(id, word).size() > 0) {
-			c.dgoodcar(id, goodid);
+			c.dgoodCar(id, goodid);
 		}
 	}
 	
@@ -71,8 +71,8 @@ public class carController {
 		String time = df.format(new Date());
 		//System.out.println(time);
 		for(int i = 0; i < goodid.length; i++) {
-			String a = c.getcar(id, goodid[i]).get(0).getAmount();
-			String b = c.getcar(id, goodid[i]).get(0).getCount();
+			String a = c.getCar(id, goodid[i]).get(0).getAmount();
+			String b = c.getCar(id, goodid[i]).get(0).getCount();
 			String amount = String.valueOf( Integer.parseInt(a) - Integer.parseInt(b));
 			c.pay(id, goodid[i], amount,time, phone, uname, address);
 			g.changeamount(goodid[i], amount);
@@ -83,9 +83,9 @@ public class carController {
 	}
 	
 	@RequestMapping(value = "/payed",method = RequestMethod.POST)
-	public List<car> payed(String id,String word){  //用户已经下单的商品
+	public List<Car> payed(String id,String word){  //用户已经下单的商品
 		if(u.getUser(id, word).size() > 0) {
-			return c.car1(id);
+			return c.Car1(id);
 		}
 		return null;
 	}
@@ -107,7 +107,7 @@ public class carController {
 	}
 	
 	@RequestMapping(value = "/sendgood",method = RequestMethod.POST)
-	public List<car> sendgood(String id,String word){  //商家待发货
+	public List<Car> sendgood(String id,String word){  //商家待发货
 		if(u.getUser(id, word).get(0).getStatus().equals("3")) {
 			return c.sendgood(id, "2");
 		}
@@ -123,7 +123,7 @@ public class carController {
 	}
 	
 	@RequestMapping(value = "/tui",method = RequestMethod.POST)
-	public List<car> tui(String id,String word){  //商家退款订单
+	public List<Car> tui(String id,String word){  //商家退款订单
 		if(u.getUser(id, word).size() > 0) {
 			return c.sendgood(id, "3");
 		}
@@ -149,9 +149,9 @@ public class carController {
 	}
 	
 	@RequestMapping(value = "/shouhuo",method = RequestMethod.POST)
-	public List<car> shouhuo(String id,String word){  //用户确认收货表
+	public List<Car> shouhuo(String id,String word){  //用户确认收货表
 		if(u.getUser(id, word).size() > 0) {
-			return c.car(id, "4");
+			return c.Car(id, "4");
 		}
 		return null;
 	}
@@ -196,18 +196,18 @@ public class carController {
 	}
 	
 	@RequestMapping(value = "/horder",method = RequestMethod.POST)
-	public List<car> horder(String id,String word){  //用户历史订单
+	public List<Car> horder(String id,String word){  //用户历史订单
 		if(u.getUser(id, word).size() > 0) {
-			return c.car(id, "5");
+			return c.Car(id, "5");
 		}
 		return null;
 	}
 	
 	@RequestMapping(value = "/horder1",method = RequestMethod.POST)
-	public List<car> horder1(String id,String word){  //用户历史订单
+	public List<Car> horder1(String id,String word){  //用户历史订单
 		if(u.getUser(id, word).size() > 0) {
 			if(u.getUser(id, word).size() > 0 && u.getUser(id, word).get(0).getStatus().equals("3")) {
-				return c.car2(id);
+				return c.Car2(id);
 			}
 		}
 		return null;

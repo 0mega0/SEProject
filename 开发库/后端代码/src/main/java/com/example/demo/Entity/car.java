@@ -1,6 +1,6 @@
 package com.example.demo.Entity;
 
-public class car {
+public class Car {
 	private String id;
 	private String shopid;
 	private String goodid;

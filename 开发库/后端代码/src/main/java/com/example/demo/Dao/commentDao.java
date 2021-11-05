@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
-import com.example.demo.Entity.car;
+import com.example.demo.Entity.Car;
 import com.example.demo.Entity.comment;
 
 @Mapper

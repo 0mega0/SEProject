@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import com.example.demo.Service.UserService;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.comment;
 import com.example.demo.Service.commentService;
-import com.example.demo.Service.userService;
+import com.example.demo.Service.UserService;
 
 @CrossOrigin
 @RestController
@@ -19,11 +20,11 @@ public class commentController {
 	@Autowired
 	private commentService c;
 	@Autowired
-	private userService u;
+	private UserService u;
 	
 	@RequestMapping(value = "/addcomment",method = RequestMethod.POST)
 	public String addcomment(String id,String word,String goodid,String text,String rate) { //用户评价
-		if(u.get(id, word).size() > 0) {
+		if(u.getUser(id, word).size() > 0) {
 			if(c.ucomment(id, goodid).size() > 0) {
 				return "您已评论,请勿重复评论！";
 			}else {

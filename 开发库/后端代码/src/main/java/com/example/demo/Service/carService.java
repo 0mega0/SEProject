@@ -3,41 +3,41 @@ package com.example.demo.Service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.Dao.carDao;
-import com.example.demo.Entity.car;
+import com.example.demo.Dao.CarDao;
+import com.example.demo.Entity.Car;
 
 @Service
-public class carService {
+public class CarService {
 	@Autowired
-	private carDao c;
+	private CarDao c;
 	
-	public void addcar(String id,String shopid,String goodid,String name,String price,String intro,String newo,String fenlei,
+	public void addCar(String id,String shopid,String goodid,String name,String price,String intro,String newo,String fenlei,
 			String size,String yijia,String count,String amount,String imgUrl) {   //用户添加商品到购物车
-		c.addcar(id,shopid, goodid, name, price, intro, newo, fenlei, size, yijia, count,amount, imgUrl, "1");
+		c.addCar(id,shopid, goodid, name, price, intro, newo, fenlei, size, yijia, count,amount, imgUrl, "1");
 	}
 	
-	public List<car> getcar(String id,String goodid){      //添加的商品是否已经在购物车
-		return c.getcar(id, goodid);      
+	public List<Car> getCar(String id,String goodid){      //添加的商品是否已经在购物车
+		return c.getCar(id, goodid);
 	}
 	
 	public void updatecount(String id,String goodid,String count) {  //已经在购物车则更新数量
 		c.updatecount(id, goodid, count);
 	}
 	
-	public List<car> car(String id,String status){  //用户购物车的所有商品
-		return c.car(id,status);
+	public List<Car> Car(String id,String status){  //用户购物车的所有商品
+		return c.Car(id,status);
 	}
 	
-	public List<car> car1(String id){  
-		return c.car1(id);
+	public List<Car> Car1(String id){
+		return c.Car1(id);
 	}
 	
-	public List<car> car2(String shopid){  
-		return c.car2(shopid);
+	public List<Car> Car2(String shopid){
+		return c.Car2(shopid);
 	}
 	
-	public void dgoodcar(String id,String goodid) {     //从购物车删除商品
-		c.dgoodcar(id, goodid);
+	public void dgoodCar(String id,String goodid) {     //从购物车删除商品
+		c.dgoodCar(id, goodid);
 	}
 	
 	public void pay (String id,String goodid,String amount,String time,String phone,String uname,String address) {      //用户付款的商品
@@ -48,7 +48,7 @@ public class carService {
    		c.tuikuan(id, goodid);
    	}
    	
-    public List<car> sendgood(String id,String status){ //商家待发货
+    public List<Car> sendgood(String id,String status){ //商家待发货
     	return c.sendgood(id, status);
     }
      
