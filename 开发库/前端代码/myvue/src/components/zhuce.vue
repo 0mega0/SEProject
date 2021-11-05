@@ -1,46 +1,75 @@
 <template>
 <div>
   <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
-    </div>
+    <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+    <el-row style="background-color: #e1e1e1;">
+  	  <el-col span="12" style="text-align: left;">
+  		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+  		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+  	  </el-col>
+  	  <el-col span="12" style="text-align: right;">
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+  	  </el-col>
+    </el-row>
+  </div>
   <div class="zhuce" >
-    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-       <el-form-item label="账号：" prop="id">
-        <el-input clearable v-model.trim ="ruleForm.id" placeholder="请输入账户id"></el-input>
+	<p style="font-size: 35px;"><b>注册</b></p>
+    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
+       <el-form-item prop="id">
+        <el-input clearable v-model.trim ="ruleForm.id" placeholder="请输入账户id">
+			<template slot="prepend">账号</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="姓名：" prop="name">
-        <el-input clearable v-model.trim ="ruleForm.name" placeholder="请输入姓名"></el-input>
+      <el-form-item  prop="name">
+        <el-input clearable v-model.trim ="ruleForm.name" placeholder="请输入姓名">
+			<template slot="prepend">姓名</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="性别：" prop="sex">
-        <el-input clearable v-model.trim="ruleForm.sex" placeholder="请输入性别，男或女"></el-input>
+      <el-form-item  prop="sex">
+        <el-input clearable v-model.trim="ruleForm.sex" placeholder="请输入性别，男或女">
+			<template slot="prepend">性别</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="手机号：" prop="phone">
-        <el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.phone" placeholder="请输入11位数字"></el-input>
+      <el-form-item prop="phone">
+        <el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.phone" placeholder="请输入11位数字">
+			<template slot="prepend">手机号</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="邮箱：" prop="email">
-        <el-input clearable v-model.trim="ruleForm.email" placeholder="请输入邮箱"></el-input>
+      <el-form-item prop="email">
+        <el-input clearable v-model.trim="ruleForm.email" placeholder="请输入邮箱">
+			<template slot="prepend">邮箱</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="城市：" prop="city">
-        <el-input clearable v-model.trim="ruleForm.city" placeholder="请输入城市"></el-input>
+      <el-form-item prop="city">
+        <el-input clearable v-model.trim="ruleForm.city" placeholder="请输入城市">
+			<template slot="prepend">城市</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="银行卡号：" prop="acount">
-        <el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.acount" placeholder="请输入16位数字"></el-input>
+      <el-form-item  prop="acount">
+        <el-input clearable oninput="value=value.replace(/^\.+|[^\d.]/g,'')" v-model.trim="ruleForm.acount" placeholder="请输入16位数字">
+			<template slot="prepend">银行卡号</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="密码：" prop="pass" >
-        <el-input clearable type="password" v-model.trim="ruleForm.pass" autocomplete="off" placeholder="请输入密码"></el-input>
+      <el-form-item  prop="pass" >
+        <el-input clearable type="password" v-model.trim="ruleForm.pass" autocomplete="off" placeholder="请输入密码">
+			<template slot="prepend">密码</template>
+		</el-input>
       </el-form-item>
-      <el-form-item label="确认密码：" prop="checkPass">
-        <el-input clearable type="password" v-model.trim="ruleForm.checkPass" autocomplete="off" placeholder="请再次输入密码"></el-input>
+      <el-form-item prop="checkPass">
+        <el-input clearable type="password" v-model.trim="ruleForm.checkPass" autocomplete="off" placeholder="请再次输入密码">
+			<template slot="prepend">确认密码</template>
+		</el-input>
       </el-form-item>
-      <el-form-item  label="验证码：" prop="verifycode">
-      <el-input v-model="ruleForm.verifycode" placeholder="请输入验证码" class="identifyinput"></el-input>
-      <el-col :span="8">
-        <div class="code" @click="refreshCode">
+      <el-form-item   prop="verifycode">
+      <el-input v-model="ruleForm.verifycode" placeholder="请输入验证码" class="identifyinput">
+		  <template slot="prepend">验证码</template>
+	  </el-input>
+      <el-col :span="8" style="margin-top: 20px;">
+        <div class="code" style="margin-left: 50px;margin-bottom: -10px;" @click="refreshCode">
             <security :identifyCode="identifyCode"></security>
         </div>
       </el-col>
@@ -107,6 +136,7 @@ export default {
       // 随机抽取四位数
       identifyCodes: '1234567890abcdef',
       identifyCode: '',
+	  logo: require('../assets/啊对对队.png'),
       ruleForm: {
         pass: '',
         checkPass: '',
@@ -253,13 +283,15 @@ export default {
 </script>
 <style type="text/css">
 .zhuce{
-position: absolute;/*绝对定位*/
-width: 300px;
-height: 150px;
-text-align: center;/*(让div中的内容居中)*/
-top: 50%;
-left: 50%;
-margin-top: -300px;
-margin-left: -150px;
+width: 400px;
+height: 820px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
 }
+.el-input {
+    width: 300px;
+  }
 </style>

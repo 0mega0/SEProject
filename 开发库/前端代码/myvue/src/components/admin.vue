@@ -124,7 +124,7 @@ export default {
       table: [],
       userid: '',
       userword: '',
-	  logo: require('../assets/啊对对队.png')
+			logo: require('../assets/啊对对队.png')
     }
   },
   mounted () {

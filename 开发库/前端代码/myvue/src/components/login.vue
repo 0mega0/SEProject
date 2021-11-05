@@ -168,10 +168,4 @@ border-radius: 15px;
 box-shadow: 0 15px 22px 10px rgba(0, 0, 0, 0.3);
 background: rgba(255, 255, 255, .3);
 }
-.sss{
-	width: 99.2vw;
-	height: 88vh;
-	background: url(../assets/zarda.jpg) no-repeat;
-	background-size: 100% 100%;position: relative;
-}
 </style>

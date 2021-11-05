@@ -1,24 +1,57 @@
 <template>
   <div >
       <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
-    </div>
+        <div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+        <el-row style="background-color: #e1e1e1;">
+      	  <el-col span="12" style="text-align: left;">
+      		  <span v-if="this.userid != ''" style="margin-left: 10px;">欢迎使用啊对对队平台购物，祝您购物愉快</span>
+      		  <span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+      	  </el-col>
+      	  <el-col span="12" style="text-align: right;">
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+      		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+      	  </el-col>
+        </el-row>
+      </div>
       <el-container style="height: 700px; border: 1px solid #eee">
         <el-header  style="background-color: rgb(238, 241, 246)">
-            <p6 style="margin-left: 25px;height: 100px;font-size:22px;">店铺管理系统</p6>
-            <el-button  type="primary" style="margin-left: 500px" @click="allgood">全部宝贝</el-button>
-            <el-button  type="primary" @click="daifahuo" >待发货订单</el-button>
-            <el-button  type="primary" @click="tuikuan" >退款订单</el-button>
-            <el-button  type="primary" @click="yiwancheng" >已完成订单</el-button>
-            <el-button  type="primary" @click="goodmanage" >已下架商品</el-button>
-            <el-button  type="primary" @click="addgood">添加商品</el-button>
+        	<el-row>
+        		<el-col span="2">
+        			<b style="font-size: 25px;">店铺管理系统</b>
+        		</el-col>
+        		<el-col span="22">
+        			<el-menu
+        				:default-active="2" 
+        				mode="horizontal"
+        				background-color="#60a0ff"
+        				text-color="#fff"
+        				active-text-color="#ffc410">
+        				<el-menu-item index="1">
+        					<span slot="title" @click="allgood">全部宝贝</span>
+        				</el-menu-item>
+        				<el-menu-item index="2">
+        					<span slot="title" @click="daifahuo">待发货订单</span>
+        				</el-menu-item>
+        				<el-menu-item index="3">
+        					<span slot="title" @click="tuikuan">退款订单</span>
+        				</el-menu-item>
+        				<el-menu-item index="4">
+        					<span slot="title" @click="yiwancheng">已完成订单</span>
+        				</el-menu-item>
+        				<el-menu-item index="5">
+        					<span slot="title" @click="goodmanage">已下架商品</span>
+        				</el-menu-item>
+        				<el-menu-item index="6" >
+        					<span slot="title"@click="addgood">添加商品</span>
+        				</el-menu-item>
+        			</el-menu>
+        		</el-col>
+        	</el-row>
         </el-header>
-        <el-main style="height:0;flex-grow:1;">
+        <el-main style="margin-left: auto;margin-right: auto;">
             <el-table ref="multipleTable" @selection-change="handleSelectionChange"
             :data="tableData.slice((currentPage - 1) * pageSize, currentPage*pageSize)"
             @row-click="openDetails" border>
@@ -65,7 +98,7 @@
             <el-pagination
                 @size-change="sizechange"
                 @current-change="currentchange"
-                style="margin-left: 1010px"
+                style="text-align: center;"
                 background
                 :current-page="currentPage"
                 :page-size="pageSize"
@@ -102,6 +135,7 @@ export default {
       rows: '',
       column: '',
       str: [],
+	  logo: require('../assets/啊对对队.png'),
       data: []
     }
   },
@@ -179,7 +213,7 @@ export default {
           this.tableData = res.data
           for (let k = 0; k < this.tableData.length; k++) {
             for (let j = 0; j < this.tableData[k].imgUrl.length; j++) {
-              this.tableData[k].imgUrl[j] = require('C:/Users/13049/Pictures/good/' + this.tableData[k].imgUrl[j])
+              //this.tableData[k].imgUrl[j] = require('C:/Users/13049/Pictures/good/' + this.tableData[k].imgUrl[j])
             }
           }
           this.length = this.tableData.length

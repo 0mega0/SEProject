@@ -1,45 +1,58 @@
 <template>
 <div>
   <div>
-      <el-button  type="primary" style="margin-left: 100px" @click="main">首页</el-button>
-      <el-button  v-if="this.userid === ''" type="primary" style="margin-left: 950px" @click="denglu">登录</el-button>
-      <el-button  v-if="this.userid != ''" type="primary" style="margin-left: 950px" @click="user">{{this.userid}}</el-button>
-      <el-button  type="primary"  @click="car">购物车</el-button>
-      <el-button  type="primary"  @click="chong">充值</el-button>
-      <el-button  type="primary"  @click="tui">退出</el-button>
-    </div>
-  <div class="addgood">
-    <p>营业执照</p>
-    <el-upload
-          :limit="1"
-          accept="image/png,image/jpg,image/jpeg"
-          action="#"
-          :auto-upload="false"
-          :on-change="fileChange"
-          :on-remove="handleRemove"
-          :file-list="shopimg"
-          list-type="picture">
-    <el-button size="small" type="primary">点击上传</el-button>
-    <div slot="tip" class="el-upload__tip">只能上传1张jpg/png/jpeg图片，且不超过2MB</div>
-  </el-upload>
-  <p>----------------------------------</p>
-  <p>身份证照片</p>
-    <el-upload
-          :limit="1"
-          accept="image/png,image/jpg,image/jpeg"
-          action="#"
-          :auto-upload="false"
-          :on-remove="handleRemove"
-          :file-list="identify"
-          :on-change="fileChange1"
-          list-type="picture">
-    <el-button size="small" type="primary">点击上传</el-button>
-    <div slot="tip" class="el-upload__tip">只能上传1张jpg/png/jpeg图片，且不超过2MB</div>
-  </el-upload>
-  <p>----------------------------------</p>
-  <el-button type="primary" @click="onSubmit">立即注册</el-button>
-  <el-button @click="quxiao">取消</el-button>
+  	<div style="text-align: center;"><el-image :src="logo" @click="main"></el-image></div>
+  	<el-row style="background-color: #e1e1e1;">
+  		<el-col span="12" style="text-align: left;">
+  			<span v-if="this.userid != ''" style="margin-left: 10px;">欢迎进入店铺管理系统</span>
+  			<span v-if="this.userid == ''" style="margin-left: 10px;color: red;">请您先登陆，才能正常购物</span>
+  		</el-col>
+  		<el-col span="12" style="text-align: right;">
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" icon="el-icon-s-custom" v-if="this.userid === ''"  @click="denglu">登录</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="primary" v-if="this.userid != ''"  @click="user">{{this.userid}}</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="danger" icon="el-icon-shopping-cart-1" @click="car">购物车</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" type="warning" icon="el-icon-money" @click="chong">充值</el-link>
+  		<el-link  style="font-size: 20px;margin-right: 10px;" icon="el-icon-back" @click="tui">退出</el-link>
+  		</el-col>
+  	</el-row>
   </div>
+	<div class="addgood">
+		<el-row :gutter="10"  style="margin-bottom: 50px; margin-top: 40px;">
+			<el-col :span="11" 
+			style="box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);border: 2px dashed lightblue;margin-right: 40px; height: 300px;">
+				<p style="font-size: 30px;">营业执照</p>
+				<el-upload
+					  :limit="1"
+					  accept="image/png,image/jpg,image/jpeg"
+					  action="#"
+					  :auto-upload="false"
+					  :on-change="fileChange"
+					  :on-remove="handleRemove"
+					  :file-list="shopimg"
+					  list-type="picture">
+					<el-button size="small" type="primary">点击上传</el-button>
+					<div slot="tip" class="el-upload__tip" style="font-size: 15px;">只能上传1张jpg/png/jpeg图片，且不超过2MB</div>
+				</el-upload>
+			</el-col>
+			<el-col :span="11" style="box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);border: 2px dashed lightblue;height: 300px;">
+				<p style="font-size: 30px;">身份证照片</p>
+				<el-upload
+					  :limit="1"
+					  accept="image/png,image/jpg,image/jpeg"
+					  action="#"
+					  :auto-upload="false"
+					  :on-remove="handleRemove"
+					  :file-list="identify"
+					  :on-change="fileChange1"
+					  list-type="picture">
+					<el-button size="small" type="primary">点击上传</el-button>
+					<div slot="tip" class="el-upload__tip" style="font-size: 15px;">只能上传1张jpg/png/jpeg图片，且不超过2MB</div>
+				</el-upload>
+			</el-col>
+		</el-row>
+		<el-button type="primary" @click="onSubmit">立即注册</el-button>
+		<el-button @click="quxiao">取消</el-button>
+	</div>
 </div>
 </template>
 <script>
@@ -47,7 +60,9 @@ export default {
   data () {
     return {
       userid: '',
+	  logo: require('../assets/啊对对队.png'),
       userword: '',
+	  active: 0,
       file1: {
         file: ''
       },
@@ -69,6 +84,9 @@ export default {
         this.$router.push('/car')
       }
     },
+	next() {
+	        if (this.active++ > 2) this.active = 0;
+	},
     get () {
       this.userid = sessionStorage.getItem('userid')
       this.userword = sessionStorage.getItem('userword')
@@ -156,11 +174,11 @@ export default {
 </script>
 <style type="text/css">
 .addgood{
-position: absolute;/*绝对定位*/
-width: 300px;
+width: 500px;
 height: 200px;
 text-align: center;/*(让div中的内容居中)*/
-left: 50%;
-margin-left: -150px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 150px;
 }
 </style>

@@ -17,7 +17,7 @@
     	</el-row>
     </div>
     <el-container style="height: 700px; border: 1px solid #eee">
-        <el-header  style="background-color: rgb(238, 241, 246)">
+		<el-header  style="background-color: rgb(238, 241, 246)">
 			<el-row>
 				<el-col span="2">
 					<b style="font-size: 25px;">店铺管理系统</b>
