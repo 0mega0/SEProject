@@ -5,10 +5,10 @@ public class Goods {
 	private String goodId;
 	private String name;
 	private String goodPrice;
-	private String disacount;
+	private String discount;
 	private String intro;
 	private String newOrOld;
-	private String catelogue;
+	private String catalogue;
 	private String size;
 	private String bargain;
 	private String amount;
@@ -39,11 +39,11 @@ public class Goods {
 	public void setGoodPrice(String goodPrice) {
 		this.goodPrice = goodPrice;
 	}
-	public String getDisacount() {
-		return disacount;
+	public String getDiscount() {
+		return discount;
 	}
-	public void setDisacount(String disacount) {
-		this.disacount = disacount;
+	public void setDiscount(String discount) {
+		this.discount = discount;
 	}
 	public String getIntro() {
 		return intro;
@@ -57,11 +57,11 @@ public class Goods {
 	public void setNewOrOld(String newOrOld) {
 		this.newOrOld = newOrOld;
 	}
-	public String getCatelogue() {
-		return catelogue;
+	public String getCatalogue() {
+		return catalogue;
 	}
-	public void setCatelogue(String catelogue) {
-		this.catelogue = catelogue;
+	public void setCatalogue(String catalogue) {
+		this.catalogue = catalogue;
 	}
 	public String getSize() {
 		return size;

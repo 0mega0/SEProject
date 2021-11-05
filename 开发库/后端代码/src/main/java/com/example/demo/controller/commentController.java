@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import java.util.List;
 
 import com.example.demo.Service.UserService;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,14 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.comment;
-import com.example.demo.Service.commentService;
-import com.example.demo.Service.UserService;
+import com.example.demo.Service.CommentService;
 
 @CrossOrigin
 @RestController
-public class commentController {
+public class CommentController {
 	@Autowired
-	private commentService c;
+	private CommentService c;
 	@Autowired
 	private UserService u;
 	

@@ -2,16 +2,13 @@ package com.example.demo.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.Car;
@@ -42,8 +39,8 @@ public class CarController {
 		}
 	}
 	
-	@RequestMapping(value = "/car",method = RequestMethod.POST)
-	public List<Car> car(String id,String word){  //用户购物车的所有商品
+	@RequestMapping(value = "/Car",method = RequestMethod.POST)
+	public List<Car> Car(String id,String word){  //用户购物车的所有商品
 		if(u.getUser(id, word).size() > 0) {
 			return c.Car(id,"1");
 		}
@@ -58,7 +55,7 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/changecount",method = RequestMethod.POST)
-	public void changecount(String id,String word,String goodid,String count){  //从购物车删除商品
+	public void changeCount(String id, String word, String goodid, String count){  //从购物车删除商品
 		if(u.getUser(id, word).size() > 0) {
 			c.updatecount(id, goodid, count);
 		}
@@ -67,9 +64,9 @@ public class CarController {
 	@RequestMapping(value = "/pay",method = RequestMethod.POST)
 	public void pay (String id,String word,String[] goodid,String phone,String uname,String address,String money) {      //用户付款的商品
 		System.out.println(goodid[0]);
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");//设置日期格式
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		//设置日期格式
 		String time = df.format(new Date());
-		//System.out.println(time);
 		for(int i = 0; i < goodid.length; i++) {
 			String a = c.getCar(id, goodid[i]).get(0).getAmount();
 			String b = c.getCar(id, goodid[i]).get(0).getCount();
@@ -160,33 +157,43 @@ public class CarController {
 	public void ushou(String id,String word,String shopid,String goodid,String price,String count) { //用户确认收货改变商品状态为5
 		if(u.getUser(id, word).size() > 0) {
 			c.shouhuo(id, goodid);
-			int a = Integer.parseInt(g.goodinfo(goodid).get(0).getShouchu()) + Integer.parseInt(count);
+			int a = Integer.parseInt(g.goodinfo(goodid).get(0).getSoldAmount()) + Integer.parseInt(count);
 			g.hasBeenSold(goodid, String.valueOf(a));
 			double b = 0;
 			int fen = 0;
 			double p = 0;
-			fen =  Integer.parseInt(u.userMoney(shopid).get(0).getGrade()) +  
+			fen =  Integer.parseInt(u.userMoney(shopid).get(0).getUserGrade()) +
 					(int)(Double.parseDouble(price)/1);
-			if(u.userMoney(shopid).get(0).getLevel().equals("1") || u.userMoney(shopid).get(0).getLevel().equals("2") ) {
-				b =  Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +  
-						Double.parseDouble(price)*(1-(Double.parseDouble(u.userMoney(shopid).get(0).getLevel())/1000));
-				p =  Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +  
-						Double.parseDouble(price)*Double.parseDouble(u.userMoney(shopid).get(0).getLevel())/1000;
-			}else if(u.userMoney(shopid).get(0).getLevel().equals("3")) {
-				b =  Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +  
-						Double.parseDouble(price)*(1-0.005);
-				p =  Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +  
-						Double.parseDouble(price)*0.005;
-			}else if(u.userMoney(shopid).get(0).getLevel().equals("4")) {
-				b =  Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +  
-						Double.parseDouble(price)*(1-0.075);
-				p =  Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +  
-						Double.parseDouble(price)*0.075;
-			}else if(u.userMoney(shopid).get(0).getLevel().equals("5")) {
-				b =  Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +  
-						Double.parseDouble(price)*(1-0.01);
-				p =  Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +  
-						Double.parseDouble(price)*0.01;
+			/*
+
+			 */
+			switch (u.userMoney(shopid).get(0).getShopLevel()) {
+				case "1":
+				case "2":
+					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+							Double.parseDouble(price) * (1 - (Double.parseDouble(u.userMoney(shopid).get(0).getShopLevel()) / 1000));
+					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
+							Double.parseDouble(price) * Double.parseDouble(u.userMoney(shopid).get(0).getShopLevel()) / 1000;
+					break;
+				case "3":
+					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+							Double.parseDouble(price) * (1 - 0.005);
+					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
+							Double.parseDouble(price) * 0.005;
+					break;
+				case "4":
+					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+							Double.parseDouble(price) * (1 - 0.075);
+					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
+							Double.parseDouble(price) * 0.075;
+					break;
+				case "5":
+					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+							Double.parseDouble(price) * (1 - 0.01);
+					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
+							Double.parseDouble(price) * 0.01;
+					break;
+				default:break;
 			}
 			System.out.println(p);
 			u.pay(shopid, String.valueOf(b));

@@ -19,16 +19,16 @@ public interface GoodsDao {
         @Result(property = "goodId", column = "goodid"),
         @Result(property = "name", column = "name"),
         @Result(property = "goodPrice", column = "price"),     
-        @Result(property = "disacount", column = "zhekou"),   
+        @Result(property = "discount", column = "zhekou"),
         @Result(property = "intro", column = "intro"),
         @Result(property = "newOrOld", column = "new"),         
-        @Result(property = "catelogue", column = "fenlei"),
+        @Result(property = "catalogue", column = "fenlei"),
         @Result(property = "size", column = "size"),
         @Result(property = "bargain", column = "yijia"),
         @Result(property = "amount", column = "amount"),      
         @Result(property = "imgUrl", column = "imgUrl"),
         @Result(property = "status", column = "status"),
-        @Result(property = "soldAcount", column = "shouchu")     
+        @Result(property = "soldAmount", column = "shouchu")
 	})
 	
 	@Insert("INSERT into goods(id,goodid,name,price,zhekou,intro,newo,fenlei,size,yijia,amount,imgUrl,status,shouchu) " // 商家上架新商品
