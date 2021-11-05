@@ -81,7 +81,6 @@ public interface CarDao {
     @Update("UPDATE Car SET count = #{2} WHERE id = #{0} and goodid = #{1}")
 	void updateCount(String id, String goodId, String count);
 
-
     /**
      * 显示用户的所有某个状态的历史记录
      * @param id        用户id
@@ -114,7 +113,6 @@ public interface CarDao {
      */
     @Delete("Delete  FROM Car WHERE id = #{0} and goodid = #{1} and status = '1'")
     void deleteGoodFromCar(String id, String goodId);
-
 
     /**
      * 付款后改变购物车中某条记录的状态为已付款(status=2)

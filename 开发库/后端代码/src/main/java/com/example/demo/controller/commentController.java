@@ -26,12 +26,12 @@ public class CommentController {
 	private UserService u;
 	
 	@RequestMapping(value = "/addcomment",method = RequestMethod.POST)
-	public String addcomment(String id,String word,String goodid,String text,String rate) { //用户评价
+	public String addComment(String id,String word,String goodId,String text,String rate) { //用户评价
 		if(u.getUser(id, word).size() > 0) {
-			if(c.ucomment(id, goodid).size() > 0) {
+			if(c.userComment(id, goodId).size() > 0) {
 				return "您已评论,请勿重复评论！";
 			}else {
-				c.addcomment(id, goodid, text, rate);
+				c.addComment(id, goodId, text, rate);
 				return "评论成功！";
 			}
 		}
@@ -39,13 +39,13 @@ public class CommentController {
 	}
 	
 	@RequestMapping(value = "/comment",method = RequestMethod.POST)
-    public List<Comment> getcomment(String goodid){  //获取商品评价
-    	return c.getcomment(goodid);
+    public List<Comment> getComment(String goodId){  //获取商品评价
+    	return c.getComment(goodId);
     }
     
     @RequestMapping(value = "/uc",method = RequestMethod.POST)
-    public String ucomment(String id,String goodid){
-    	return c.ucomment(id, goodid).get(0).getText();
+    public String userComment(String id,String goodId){
+    	return c.userComment(id, goodId).get(0).getText();
     }
     
 }	

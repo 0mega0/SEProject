@@ -39,14 +39,14 @@ public class CarController {
 	 * @return parameter登录角色
 	 */
 	@RequestMapping(value = "/addCar",method = RequestMethod.POST)
-	public void addgood(String id,String word,String shopId,String goodId,String name,String price,String intro,String newOrOld,String catalogue,
-			String size,String yijia,String count,String amount,String imgUrl) {
+	public void addGood(String id,String word,String shopId,String goodId,String name,String price,String intro,String newOrOld,String catalogue,
+			String size,String bargain,String count,String amount,String imgUrl) {
 		if(u.getUser(id, word).size() > 0) {
 			if(c.getCar(id, goodId).size() > 0) {
 				int s = Integer.parseInt(count) + Integer.parseInt(c.getCar(id, goodId).get(0).getCount());
 				c.updateCount(id, goodId, String.valueOf(s));
 			}else {
-				c.addCar(id,shopId, goodId, name, price, intro, newOrOld, catalogue, size, yijia, count, amount,imgUrl);
+				c.addCar(id,shopId, goodId, name, price, intro, newOrOld, catalogue, size, bargain, count, amount,imgUrl);
 			}
 		}
 	}
@@ -60,7 +60,7 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/dgoodcar",method = RequestMethod.POST)
-	public void dgoodcar(String id,String word,String goodid){  //从购物车删除商品
+	public void deleteGoodFromCar(String id, String word, String goodid){  //从购物车删除商品
 		if(u.getUser(id, word).size() > 0) {
 			c.deleteGoodFromCar(id, goodid);
 		}
@@ -100,8 +100,8 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/tuikuan",method = RequestMethod.POST)
-	public String tuikuan(String id,String word,String goodid,String time) throws ParseException{  //退款
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");//设置日期格式
+	public String drawback(String id, String word, String goodid, String time) throws ParseException{  //退款
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		String t = df.format(new Date());
 		long from = df.parse(time).getTime();
 		long to = df.parse(t).getTime();
@@ -116,15 +116,15 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/sendgood",method = RequestMethod.POST)
-	public List<Car> sendgood(String id,String word){  //商家待发货
+	public List<Car> getGoodToBeSend(String id,String word){  //商家待发货
 		if(u.getUser(id, word).get(0).getStatus().equals("3")) {
 			return c.getGoodToBeSend(id, "2");
 		}
 		return null;
 	}
-	
+
 	@RequestMapping(value = "/fahuo",method = RequestMethod.POST)
-	public String fahuo(String id,String shopid,String word,String goodid){  //商家确认发货
+	public String sendGood(String id,String shopid,String word,String goodid){  //商家确认发货
 		if(u.getUser(shopid, word).size() > 0) {
 			 c.sendGood(id, shopid, goodid, "4");
 		}
@@ -132,24 +132,24 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/tui",method = RequestMethod.POST)
-	public List<Car> tui(String id,String word){  //商家退款订单
+	public List<Car> drawbackGood(String id,String word){  //商家退款订单
 		if(u.getUser(id, word).size() > 0) {
-			return c.sendgood(id, "3");
+			return c.getGoodToBeSend(id, "3");
 		}
 		return null;
 	}
 	
 	@RequestMapping(value = "/jutui",method = RequestMethod.POST)
-	public void jutui(String id,String shopid,String word,String goodid){  //商家拒绝退款
+	public void drawbackRefuse(String id,String shopid,String word,String goodid){  //商家拒绝退款
 		if(u.getUser(shopid, word).size() > 0) {
-			c.jutui(id, goodid);
+			c.drawbackRefuse(id, goodid);
 		}
 	}
 	
 	@RequestMapping(value = "/allowtui",method = RequestMethod.POST)
-	public void allowtui(String id,String shopid,String word,String goodid,String price,String count,String amount) {    //同意退款
+	public void drawbackAccept(String id,String shopid,String word,String goodid,String price,String count,String amount) {    //同意退款
 		if(u.getUser(shopid, word).size() > 0) {
-			c.tuigood(id, goodid);
+			c.drawbackGood(id, goodid);
 			int a = Integer.parseInt(count) + Integer.parseInt(amount);
 			g.changeAmount(shopid,goodid , String.valueOf(a));
 			double b = Double.parseDouble(u.userMoney(id).get(0).getMoney()) + Double.parseDouble(price);
@@ -158,7 +158,7 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/shouhuo",method = RequestMethod.POST)
-	public List<Car> shouhuo(String id,String word){  //用户确认收货表
+	public List<Car> receiptConfirm(String id,String word){  //用户确认收货表
 		if(u.getUser(id, word).size() > 0) {
 			return c.Car(id, "4");
 		}
@@ -166,41 +166,38 @@ public class CarController {
 	}
 	
 	@RequestMapping(value = "/ushou",method = RequestMethod.POST)
-	public void ushou(String id,String word,String shopid,String goodid,String price,String count) { //用户确认收货改变商品状态为5
+	public void userReceiptConfirm(String id,String word,String shopId,String goodId,String price,String count) { //用户确认收货改变商品状态为5
 		if(u.getUser(id, word).size() > 0) {
-			c.shouhuo(id, goodid);
-			int a = Integer.parseInt(g.goodinfo(goodid).get(0).getSoldAmount()) + Integer.parseInt(count);
-			g.hasBeenSold(goodid, String.valueOf(a));
+			c.receiptConfirm(id, goodId);
+			int a = Integer.parseInt(g.goodinfo(goodId).get(0).getSoldAmount()) + Integer.parseInt(count);
+			g.hasBeenSold(goodId, String.valueOf(a));
 			double b = 0;
 			int fen = 0;
 			double p = 0;
-			fen =  Integer.parseInt(u.userMoney(shopid).get(0).getUserGrade()) +
+			fen =  Integer.parseInt(u.userMoney(shopId).get(0).getUserGrade()) +
 					(int)(Double.parseDouble(price)/1);
-			/*
-
-			 */
-			switch (u.userMoney(shopid).get(0).getShopLevel()) {
+			switch (u.userMoney(shopId).get(0).getShopLevel()) {
 				case "1":
 				case "2":
-					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
-							Double.parseDouble(price) * (1 - (Double.parseDouble(u.userMoney(shopid).get(0).getShopLevel()) / 1000));
+					b = Double.parseDouble(u.userMoney(shopId).get(0).getMoney()) +
+							Double.parseDouble(price) * (1 - (Double.parseDouble(u.userMoney(shopId).get(0).getShopLevel()) / 1000));
 					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
-							Double.parseDouble(price) * Double.parseDouble(u.userMoney(shopid).get(0).getShopLevel()) / 1000;
+							Double.parseDouble(price) * Double.parseDouble(u.userMoney(shopId).get(0).getShopLevel()) / 1000;
 					break;
 				case "3":
-					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+					b = Double.parseDouble(u.userMoney(shopId).get(0).getMoney()) +
 							Double.parseDouble(price) * (1 - 0.005);
 					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
 							Double.parseDouble(price) * 0.005;
 					break;
 				case "4":
-					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+					b = Double.parseDouble(u.userMoney(shopId).get(0).getMoney()) +
 							Double.parseDouble(price) * (1 - 0.075);
 					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
 							Double.parseDouble(price) * 0.075;
 					break;
 				case "5":
-					b = Double.parseDouble(u.userMoney(shopid).get(0).getMoney()) +
+					b = Double.parseDouble(u.userMoney(shopId).get(0).getMoney()) +
 							Double.parseDouble(price) * (1 - 0.01);
 					p = Double.parseDouble(u.userMoney("admin").get(0).getMoney()) +
 							Double.parseDouble(price) * 0.01;
@@ -208,7 +205,7 @@ public class CarController {
 				default:break;
 			}
 			System.out.println(p);
-			u.pay(shopid, String.valueOf(b));
+			u.pay(shopId, String.valueOf(b));
 			u.pay("admin", String.valueOf(p));
 			u.userGrade(id, String.valueOf(fen));
 		}
