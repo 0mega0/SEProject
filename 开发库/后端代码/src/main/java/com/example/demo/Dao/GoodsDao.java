@@ -15,20 +15,20 @@ import com.example.demo.Entity.User;
 @Mapper
 public interface GoodsDao {
 	@Results({
-        @Result(property = "id", column = "id"),
-        @Result(property = "goodid", column = "goodid"),
+        @Result(property = "userId", column = "id"),
+        @Result(property = "goodId", column = "goodid"),
         @Result(property = "name", column = "name"),
-        @Result(property = "price", column = "price"),     
-        @Result(property = "zhekou", column = "zhekou"),   
+        @Result(property = "goodPrice", column = "price"),     
+        @Result(property = "disacount", column = "zhekou"),   
         @Result(property = "intro", column = "intro"),
-        @Result(property = "newo", column = "new"),         
-        @Result(property = "fenlei", column = "fenlei"),
+        @Result(property = "newOrOld", column = "new"),         
+        @Result(property = "catelogue", column = "fenlei"),
         @Result(property = "size", column = "size"),
-        @Result(property = "yijia", column = "yijia"),
+        @Result(property = "bargain", column = "yijia"),
         @Result(property = "amount", column = "amount"),      
         @Result(property = "imgUrl", column = "imgUrl"),
         @Result(property = "status", column = "status"),
-        @Result(property = "shouchu", column = "shouchu")     
+        @Result(property = "soldAcount", column = "shouchu")     
 	})
 	
 	@Insert("INSERT into goods(id,goodid,name,price,zhekou,intro,newo,fenlei,size,yijia,amount,imgUrl,status,shouchu) " // 商家上架新商品

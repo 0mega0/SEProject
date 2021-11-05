@@ -15,20 +15,20 @@ import com.example.demo.Entity.User;
 @Mapper
 public interface UserDao {
 	@Results({
-        @Result(property = "id", column = "id"),
-        @Result(property = "word", column = "word"),
+        @Result(property = "userId", column = "id"),
+        @Result(property = "password", column = "word"),
         @Result(property = "name", column = "name"),
         @Result(property = "sex", column = "sex"),
         @Result(property = "phone", column = "phone"),
         @Result(property = "email", column = "email"),
         @Result(property = "city", column = "city"),
-        @Result(property = "account", column = "account"),
+        @Result(property = "shopLicence", column = "account"),
         @Result(property = "status", column = "status"),
         @Result(property = "licence", column = "licence"),
-        @Result(property = "card", column = "card"),
+        @Result(property = "userCard", column = "card"),
         @Result(property = "money", column = "money"),
-        @Result(property = "level", column = "level"),
-        @Result(property = "grade", column = "grade")
+        @Result(property = "shopLevel", column = "level"),
+        @Result(property = "shopLevel", column = "grade")
 	})
 	
 	@Select("SELECT * FROM user WHERE id = #{0} and word = #{1}") 
