@@ -2,7 +2,6 @@ package com.example.demo.Service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.Dao.GoodsDao;
@@ -55,8 +54,8 @@ public class GoodsService {
 		goodsDao.changeDisacount(goodid, zhekou);
 	}
 	
-	public void changeAmount(String id,String goodid,String amount) { //退款  商品库存加回来
-		goodsDao.changeAmount(id, goodid, amount);
+	public void refund(String id, String goodid, String amount) { //退款  商品库存加回来
+		goodsDao.refund(id, goodid, amount);
 	}
 	
 	public void hasBeenSold(String goodid,String shouchu) { //历史销量增加

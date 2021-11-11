@@ -220,7 +220,7 @@ public class GoodsController {
 	@RequestMapping(value = "/changeamount", method = RequestMethod.POST)
 	public void changeAmount(String id, String word, String goodid, String amount) {
 		if (userService.getUser(id, word).size() > 0) {
-			goodsService.changeAmount(id, goodid, amount);
+			goodsService.refund(id, goodid, amount);
 			carService.amountChange(id, goodid, amount);
 		}
 	}

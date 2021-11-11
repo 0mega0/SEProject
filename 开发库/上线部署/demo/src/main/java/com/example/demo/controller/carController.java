@@ -2,22 +2,24 @@ package com.example.demo.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.car;
 import com.example.demo.Service.GoodsService;
 import com.example.demo.Service.carService;
 import com.example.demo.Service.userService;
+
+/**
+ * @author Alex,0mega_0
+ * last change 2021/11/5
+ */
 
 @CrossOrigin
 @RestController
@@ -28,7 +30,24 @@ public class carController {
 	private userService u;
 	@Autowired
 	private GoodsService g;
-	
+
+	/**
+	 * 向购物车中添加商品
+	 * @param id 		用户id
+	 * @param word		用户密码
+	 * @param shopid	商家id
+	 * @param goodid	商品id
+	 * @param name		商品名
+	 * @param price		商品价格
+	 * @param intro		商品简介
+	 * @param newo		新旧程度
+	 * @param fenlei	商品分类
+	 * @param size		尺寸
+	 * @param yijia		是否可以砍价
+	 * @param count		添加数量
+	 * @param amount	商品总量
+	 * @param imgUrl	商品缩略图URL
+	 */
 	@RequestMapping(value = "/addcar",method = RequestMethod.POST)
 	public void addgood(String id,String word,String shopid,String goodid,String name,String price,String intro,String newo,String fenlei,
 			String size,String yijia,String count,String amount,String imgUrl) {
@@ -41,29 +60,58 @@ public class carController {
 			}
 		}
 	}
-	
+
+	/**
+	 * 获取某用户的购物车中的所有商品
+	 * @param id 	用户id
+	 * @param word	用户密码
+	 * @return		返回某用户的购物车中所有商品的列表
+	 */
 	@RequestMapping(value = "/car",method = RequestMethod.POST)
-	public List<car> car(String id,String word){  //用户购物车的所有商品
+	public List<car> car(String id,String word){
 		if(u.get(id, word).size() > 0) {
 			return c.car(id,"1");
 		}
 		return null;
 	}
-	
+
+	/**
+	 * 从购物车中删除商品
+	 * @param id 		用户id
+	 * @param word		用户密码
+	 * @param goodid	商品id
+	 */
 	@RequestMapping(value = "/dgoodcar",method = RequestMethod.POST)
 	public void dgoodcar(String id,String word,String goodid){  //从购物车删除商品
 		if(u.get(id, word).size() > 0) {
 			c.dgoodcar(id, goodid);
 		}
 	}
-	
+
+	/**
+	 * 商品已经在购物车则更新数量
+	 * @param id 		用户id
+	 * @param word		用户密码
+	 * @param goodid	商品id
+	 * @param count		添加数量
+	 */
 	@RequestMapping(value = "/changecount",method = RequestMethod.POST)
 	public void changecount(String id,String word,String goodid,String count){  //从购物车删除商品
 		if(u.get(id, word).size() > 0) {
 			c.updatecount(id, goodid, count);
 		}
 	}
-	
+
+	/**
+	 * 付款，付款后改变购物车中某条记录的状态为已付款(status=2)
+	 * @param id		用户id
+	 * @param word		用户密码
+	 * @param goodid	商品id
+	 * @param phone		支付用户的电话号码
+	 * @param uname		支付用户的用户昵称
+	 * @param address	支付用户的收货地址
+	 * @param money		本次支付的总价格
+	 */
 	@RequestMapping(value = "/pay",method = RequestMethod.POST)
 	public void pay (String id,String word,String[] goodid,String phone,String uname,String address,String money) {      //用户付款的商品
 		System.out.println(goodid[0]);
@@ -81,7 +129,14 @@ public class carController {
 		double rmb = Double.parseDouble(m) - Double.parseDouble(money);
 		u.pay(id, String.valueOf(rmb));
 	}
-	
+
+
+	/**
+	 * 获取用户已经支付下单的商品
+	 * @param id 		用户id
+	 * @param word		用户密码
+	 * @return			返回用户所有已经下单的商品列表
+	 */
 	@RequestMapping(value = "/payed",method = RequestMethod.POST)
 	public List<car> payed(String id,String word){  //用户已经下单的商品
 		if(u.get(id, word).size() > 0) {
@@ -89,7 +144,17 @@ public class carController {
 		}
 		return null;
 	}
-	
+
+
+	/**
+	 * 申请退款，若超过24小时无法退款，否则交由商家审核
+	 * @param id 		用户id
+	 * @param word		用户密码
+	 * @param goodid	商品id
+	 * @param time		用户下单时间
+	 * @return			返回退款状态提示
+	 * @throws ParseException
+	 */
 	@RequestMapping(value = "/tuikuan",method = RequestMethod.POST)
 	public String tuikuan(String id,String word,String goodid,String time) throws ParseException{  //退款
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");//设置日期格式
@@ -105,7 +170,14 @@ public class carController {
 		}
 		return "申请退款成功，请等待商家进行审核！";
 	}
-	
+
+
+	/**
+	 * 当调用接口的用户是商家时，返回该商家所有[已付款待发货]的商品订单列表
+	 * @param id		用户id
+	 * @param word		用户密码
+	 * @return			返回已付款代发货的商品订单列表
+	 */
 	@RequestMapping(value = "/sendgood",method = RequestMethod.POST)
 	public List<car> sendgood(String id,String word){  //商家待发货
 		if(u.get(id, word).get(0).getStatus().equals("3")) {
@@ -113,7 +185,14 @@ public class carController {
 		}
 		return null;
 	}
-	
+
+	/**
+	 * 对某商品进行发货处理，并将该商品订单状态改为已发货(status=4)
+	 * @param id 		用户id
+	 * @param shopid	商家id
+	 * @param word		用户密码
+	 * @param goodid	商品id
+	 */
 	@RequestMapping(value = "/fahuo",method = RequestMethod.POST)
 	public String fahuo(String id,String shopid,String word,String goodid){  //商家确认发货
 		if(u.get(shopid, word).size() > 0) {
@@ -121,7 +200,14 @@ public class carController {
 		}
 		return null;
 	}
-	
+
+
+	/**
+	 * 查询某商家订单库中已申请退款的订单
+	 * @param id 		用户id
+	 * @param word		用户密码
+	 * @return			符合条件的记录条目列表
+	 */
 	@RequestMapping(value = "/tui",method = RequestMethod.POST)
 	public List<car> tui(String id,String word){  //商家退款订单
 		if(u.get(id, word).size() > 0) {
@@ -129,14 +215,33 @@ public class carController {
 		}
 		return null;
 	}
-	
+
+
+	/**
+	 * 商家拒绝某用户的退款申请，将订单状态从已申请退款(status=3)改为已付款(status=2)
+	 * @param id 		用户id
+	 * @param shopid	商家id
+	 * @param word		用户密码
+	 * @param goodid	商品id
+	 */
 	@RequestMapping(value = "/jutui",method = RequestMethod.POST)
 	public void jutui(String id,String shopid,String word,String goodid){  //商家拒绝退款
 		if(u.get(shopid, word).size() > 0) {
 			c.jutui(id, goodid);
 		}
 	}
-	
+
+
+	/**
+	 * 商家同意退款
+	 * @param id 		
+	 * @param shopid
+	 * @param word
+	 * @param goodid
+	 * @param price		价格
+	 * @param count
+	 * @param amount
+	 */
 	@RequestMapping(value = "/allowtui",method = RequestMethod.POST)
 	public void allowtui(String id,String shopid,String word,String goodid,String price,String count,String amount) {    //同意退款
 		if(u.get(shopid, word).size() > 0) {

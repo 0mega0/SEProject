@@ -151,7 +151,7 @@ public class CarController {
 		if(u.getUser(shopid, word).size() > 0) {
 			c.drawbackGood(id, goodid);
 			int a = Integer.parseInt(count) + Integer.parseInt(amount);
-			g.changeAmount(shopid,goodid , String.valueOf(a));
+			g.refund(shopid,goodid , String.valueOf(a));
 			double b = Double.parseDouble(u.userMoney(id).get(0).getMoney()) + Double.parseDouble(price);
 			u.pay(id, String.valueOf(b));
 		}

@@ -66,7 +66,7 @@ public interface GoodsDao {
 	void changeDisacount(String goodid,String zhekou);
 	
 	@Update("UPDATE goods SET amount = #{2} WHERE id = #{0} and goodid = #{1}")  //退款  商品库存加回来
-	void changeAmount(String id,String goodid,String amount);
+	void refund(String id, String goodid, String amount);
 	
 	@Update("UPDATE goods SET shouchu = #{1} WHERE goodid = #{0}")  //历史销量增加
 	void hasBeenSold(String goodid,String shouchu);
