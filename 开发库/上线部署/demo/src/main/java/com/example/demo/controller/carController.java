@@ -130,7 +130,6 @@ public class carController {
 		u.pay(id, String.valueOf(rmb));
 	}
 
-
 	/**
 	 * 获取用户已经支付下单的商品
 	 * @param id 		用户id
@@ -144,7 +143,6 @@ public class carController {
 		}
 		return null;
 	}
-
 
 	/**
 	 * 申请退款，若超过24小时无法退款，否则交由商家审核
@@ -170,7 +168,6 @@ public class carController {
 		}
 		return "申请退款成功，请等待商家进行审核！";
 	}
-
 
 	/**
 	 * 当调用接口的用户是商家时，返回该商家所有[已付款待发货]的商品订单列表
@@ -201,7 +198,6 @@ public class carController {
 		return null;
 	}
 
-
 	/**
 	 * 查询某商家订单库中已申请退款的订单
 	 * @param id 		用户id
@@ -215,7 +211,6 @@ public class carController {
 		}
 		return null;
 	}
-
 
 	/**
 	 * 商家拒绝某用户的退款申请，将订单状态从已申请退款(status=3)改为已付款(status=2)
@@ -231,10 +226,9 @@ public class carController {
 		}
 	}
 
-
 	/**
 	 * 商家同意退款
-	 * @param id 		
+	 * @param id
 	 * @param shopid
 	 * @param word
 	 * @param goodid

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.9" PIVersion="1.0.0.0" href="file:///D:\教学\软件项目实践\软件项目实践\文档模板\《用户手册》模板.xsn" name="urn:schemas-microsoft-com:office:infopath:-Xg---Qo:" language="zh-cn" productVersion="15.0.0" ?><?mso-application progid="InfoPath.Document"?><用户手册 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<首部 项目名称="二手交易平台" 项目标识="线上市场" version="1.0">
+		<状态与版本信息>
+			<文件状态>正式发布</文件状态>
+			<文件标识>用户手册</文件标识>
+			<当前版本>v1.0.0</当前版本>
+			<作者>
+				<姓名>俞昊洋、吴昊</姓名>
+				<学号>2018011353、2018011349</学号>
+				<团队>啊对对队</团队>
+			</作者>
+			<完成日期>2021-11-11</完成日期>
+			<版本更新信息>v1.0.0 完成了用户手册</版本更新信息>
+		</状态与版本信息>
+		<引言>
+			<使用人员>"二手交易平台"全体使用人员</使用人员>
+			<编写目的><div xmlns="http://www.w3.org/1999/xhtml">本用户手册旨在帮助使用该软件的用户了解本软件的安装及使用用法。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">内容介绍了软件使用环境，和一些使用的流程和错误处理方案，</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></编写目的>
+			<背景><div xmlns="http://www.w3.org/1999/xhtml">本用户手册的目标软件项目为"二手交易市场"。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">本项目由项目甲方阿里巴巴提出，由“啊对对队”项目开发小组开发。</div></背景>
+			<定义与缩写>
+				<术语>无</术语>
+				<解释></解释>
+			</定义与缩写>
+			<参考资料>
+				<条目>王伟编著.软件工程技术与实用开发工具.中国人民大学出版社,2010.02.</条目>
+			</参考资料>
+		</引言>
+	</首部>
+	<用途>
+		<功能><div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体">本软件的开发目的为上线一个可供一定地区使用的二手交易平台。</font></div>
+<div><font size="2" face="宋体">可供用户进行浏览商品、注册、登录、加入购物车、购买、支付、申请商家、上架出售自己的货物。</font></div>
+<div><font size="2" face="宋体">用户无购买、消费限制；商家无上架物品限制</font></div>
+<div><font size="2" face="宋体">用户账户可以多端登录。</font></div></div></功能>
+		<性能>
+			<精度><div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体"><strong>用户输入数据：</strong></font></div>
+<div><font size="2" face="宋体">必要：无精度要求：</font></div>
+<div><font size="2" face="宋体">账号（不可使用其他人已注册或正在审核的id），密码（符合要求的字符串），姓名（字符串），验证码（4位字符串）</font></div>
+<div><font size="2" face="宋体">非必要：无精度要求：</font></div>
+<div><font size="2" face="宋体">身份证件：图片，营业执照：图片</font></div>
+<div><font size="2" face="宋体">精度要求：手机号：11位整数，银行卡号：19位整数</font></div>
+<div><font size="2" face="宋体"><strong>输出数据：</strong></font></div>
+<div><font size="2" face="宋体">在主页面评论数量&lt;10000条时显示整数，否则以万为单位，千位以下舍去，显示出“**万+”</font></div>
+<div><font size="2" face="宋体">；商家评分1～5浮点数转化为字符串显示；订单、购物车中数量为整数</font></div>
+<div><font size="2" face="宋体"></font> </div></div></精度>
+			<时间特性><font xmlns="http://www.w3.org/1999/xhtml" size="2" face="宋体">响应时间&lt;1s，更新处理时间&lt;1s，数据传输时间3～6s（受制于服务器速度影响，主要延迟都是来自于此），转换时间&lt;10ms，计算时间&lt;10ms</font></时间特性>
+			<灵活性><div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong>操作方式</strong></font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">支持鼠标点击，键盘输入；或者触屏方式输入。可灵活多变</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong>运行环境</strong></font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">不同操作平台使用网页即可浏览，支持ie9及以上浏览器环境。旧版pc或者pe端设备可能无法运行</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong>结果精度</strong></font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">银行卡号和手机号可以更改输入精度，适应能力较好</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong>时间特性</strong></font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">主要受制于租借的服务器性能和其网络带宽，更换较好的服务器可以解决，I/O和数据库无明显时间延迟</font></div></灵活性>
+		</性能>
+		<安全保密><div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体"><strong>安全</strong></font></div>
+<div><font size="2" face="宋体">用户登录使用token验证。使用专门的用户数据库账户。</font></div>
+<div><font size="2" face="宋体">保密设施</font></div>
+<div><font size="2" face="宋体">数据库保密，spring框架加密保护。</font></div>
+<div><font size="2" face="宋体">无其他用户登录验证。</font></div></div></安全保密>
+	</用途>
+	<运行环境>
+		<硬件设备><div xmlns="http://www.w3.org/1999/xhtml">建议最低配置：</div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong>
+<div><font size="2" face="宋体">处理器:</font></div></strong> Intel Pentium Dual CPU E2180 2.00GHz</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体"><strong>
+<div><font size="2" face="宋体">内存:</font></div></strong> 2 GB RAM</font></div></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong>
+<div><font size="2" face="宋体">显卡:</font></div></strong></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong></strong> 不要求</div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">
+<div><font size="2" face="宋体"><strong>存储空间:</strong></font></div>
+<div><strong> </strong>需要至少 400 MB 可用空间</div>
+<div><font size="2" face="宋体">
+<div><font size="2" face="宋体"><strong>网络:</strong></font></div>
+<div><strong> </strong>宽带互联网连接</div>
+<div> </div></font></div></font></div></硬件设备>
+		<支持软件><div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong>操作系统:</strong></font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体"><strong></strong> Windows 7/8/10</font></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong>数据库类型及版本:</strong></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong> </strong>MySQL5.5及以上</div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong>前端服务器运行库:</strong></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong> </strong>npm框架 6.0及以上</div>
+<div xmlns="http://www.w3.org/1999/xhtml"><strong>后端服务器运行库:</strong></div>
+<div xmlns="http://www.w3.org/1999/xhtml"> JRE7及以上</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> SpringBoot v2.4.4及以上 </div>
+<div xmlns="http://www.w3.org/1999/xhtml"> TomCat 8.0及以上</div></支持软件>
+		<数据结构>所需MySQL数据库及其配套建库和建数据表</数据结构>
+	</运行环境>
+	<使用过程>
+		<安装与初始化><div xmlns="http://www.w3.org/1999/xhtml">安装分为前端和后端</div>
+<div xmlns="http://www.w3.org/1999/xhtml">后端在完成Tomcat和SpringBoot的安装后，在项目根目录下，使用命令行控制工具输入 mvn spring-boot:run 即可启动项目后端</div>
+<div xmlns="http://www.w3.org/1999/xhtml">前端在完成npm安装后，在项目根目录下，使用命令行控制工具</div>
+<div xmlns="http://www.w3.org/1999/xhtml">输入 npm run dev 即可启动项目前端服务器</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></安装与初始化>
+		<使用流程和操作步骤>
+			<说明><div xmlns="http://www.w3.org/1999/xhtml">本项目为B-S结构(浏览器-服务器)</div>
+<div xmlns="http://www.w3.org/1999/xhtml">将项目运行后，通过浏览器(推荐chrome v80.0以上版本)连接到前端服务器开放的ip地址。成功连接后将显示可视化界面的商城。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">随后直接使用鼠标点击和键盘输入即可完成操作交互。</div></说明>
+			<子系统使用流程和操作步骤>无</子系统使用流程和操作步骤>
+		</使用流程和操作步骤>
+		<出错处理和恢复><div xmlns="http://www.w3.org/1999/xhtml">由于本软件的主要数据内容都存储于数据库</div>
+<div xmlns="http://www.w3.org/1999/xhtml">所以若前端/后端出现错误时，应停止项目程序运行</div>
+<div xmlns="http://www.w3.org/1999/xhtml">并尝试重新启动项目，查看错误是否恢复。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">若错误仍然出现，应将出现错误的原项目程序删除，重新解包项目，重新安装。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">若错误仍然出现，应检查硬件设施是否出现问题。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">若错误仍然存在，应联系项目组成员上门处理。</div></出错处理和恢复>
+	</使用过程>
+</用户手册>
