@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.2" PIVersion="1.0.0.0" href="file:///D:\教学\软件项目实践\软件项目实践\文档模板\《测试报告》模板.xsn" name="urn:schemas-microsoft-com:office:infopath:--EU--Qo:" language="zh-cn" productVersion="15.0.0" ?><?mso-application progid="InfoPath.Document"?><测试报告 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<首部 项目名称="二手交易平台" 项目标识="线上市场" version="1.0">
+		<状态与版本信息>
+			<文件状态>正式发布</文件状态>
+			<文件标识>测试用例</文件标识>
+			<当前版本>v2.1.0</当前版本>
+			<作者>
+				<姓名>吴浩涵</姓名>
+				<学号>2018011258</学号>
+				<团队>啊对对队</团队>
+			</作者>
+			<完成日期>2021-11-12</完成日期>
+			<版本更新信息><font xmlns="http://www.w3.org/1999/xhtml" face="仿宋_GB2312">v2.1.0 记录了对所有测试项目和测试用例的详细信息</font></版本更新信息>
+		</状态与版本信息>
+		<引言>
+			<使用人员><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><font size="2" face="宋体">二手商品买家、二手商品卖家、系统管理员</font></div></使用人员>
+			<编写目的>记录所有测试用例测试的结果</编写目的>
+			<背景><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><font size="2" face="宋体">a.名称：二手交易平台（线上市场） </font></div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<div><font size="2" face="宋体">b.本项目由啊对对队提出并由俞昊洋担任项目经理，由俞昊洋、宋雪霞担任配置组，由吴昊、徐伟、崔辰 </font></div>
+<div><font size="2" face="宋体">垚、张弈凡、刘科宏、张子文、刘晨阳担任开发组，由俞昊洋、宋雪霞、吴昊、崔辰垚担任管理组，周俊 </font></div>
+<div><font size="2" face="宋体">毅、吴浩涵、汪筱青担任质保组和用户组，并在个人笔记本上进行运维。旨在为有二手商品买卖需求的用 </font></div>
+<div><font size="2" face="宋体">户提供一个可供交易的平台。 </font></div></div></背景>
+			<定义与缩写>
+				<术语>运维</术语>
+				<解释><div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml">
+<div><font size="2" face="宋体">指互联网运维，通常属于技术部门，与研发、测试、系统管理同为互联网产品技术支撑的4大部门，这 </font></div>
+<div><font size="2" face="宋体">个划分在国内和国外以及大小公司间都会多少有一些不同。 </font></div>
+<div><font size="2" face="宋体">一个互联网产品的生成一般经历的过程是：产品经理、需求分析、研发部门开发、测试部门测试、运 </font></div>
+<div><font size="2" face="宋体">维部门部署发布以及长期的运行维护。 </font></div>
+<div><font size="2" face="宋体">运维，本质上是对网络、服务器、服务的生命周期各个阶段的运营与维护，在成本、稳定性、效率上 </font></div>
+<div><font size="2" face="宋体">达成一致可接受的状态。 </font></div></div></解释>
+			</定义与缩写>
+			<参考资料>
+				<条目></条目>
+			</参考资料>
+		</引言>
+	</首部>
+	<测试概要>
+		<测试用例设计><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">前端：验证登录和注册的单元模块</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">登录：userid           admin/buyer/zxc       </div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">      userword         123/456</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">注册：</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     email             <a>123@.com</a></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     sex               男/女/1</font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     phone             </font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">11111111111/</font></font></font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">11111111</font></font></font></font></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     name              zack</font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     acount            </font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">0000000000000000/</font></font></font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">00000000</font></font></font></font></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     city              </font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">beijing/test</font></font></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     id                test</font></font></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></测试用例设计>
+		<测试环境与配置>
+			<硬件环境>计算机</硬件环境>
+			<软件环境>前端：windos/vs/vue</软件环境>
+		</测试环境与配置>
+		<测试方法和工具><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">前端测试方法：单元测试</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">前端测试工具：mocha+chai/jest</div></测试方法和工具>
+	</测试概要>
+	<测试结果>
+		<测试执行情况与记录><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">前端测试：</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">登录测试：</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">测试用例一、测试用例二成功。测试用例三测试用例四用例五失败</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">注册测试：</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">测试用例一到三成功、测试用例四五失败、测试用例六八成功、测试用例七九失败、测试用例十成功、测试用例十一失败</div></测试执行情况与记录>
+		<覆盖分析><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">前端</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">登录覆盖：userid正确/错误</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">         userword正确/错误</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">注册覆盖：</div>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml">
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     email             <a>正确</a></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     sex               正确/错误</font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     phone             </font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">正确/错误</font></font></font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"></font></font></font></font></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     name              正确</font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     acount            </font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">正确/错误</font></font></font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"></font></font></font></font></font></font></div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体">     city              </font></font><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体"><font size="2" face="宋体">正确/错误</font></font></font></font><font size="2" face="宋体"><font size="2" face="宋体">   </font></font></div></div></div></div></div></div></div></div></div></div></div></div></div></覆盖分析>
+	</测试结果>
+	<缺陷的统计与分析>
+		<缺陷统计></缺陷统计>
+		<缺陷分析></缺陷分析>
+	</缺陷的统计与分析>
+	<测试结论与建议>
+		<结论/>
+		<建议></建议>
+	</测试结论与建议>
+</测试报告>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.2" PIVersion="1.0.0.0" href="file:///D:\教学\软件项目实践\软件项目实践\文档模板\《测试报告》模板.xsn" name="urn:schemas-microsoft-com:office:infopath:--EU--Qo:" language="zh-cn" productVersion="15.0.0" ?><?mso-application progid="InfoPath.Document"?><测试报告 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<首部 项目名称="二手交易平台" 项目标识="线上市场" version="1.0">
+		<状态与版本信息>
+			<文件状态>正式发布</文件状态>
+			<文件标识>测试报告</文件标识>
+			<当前版本>v2.1.0</当前版本>
+			<作者>
+				<姓名>崔辰垚</姓名>
+				<学号>2018011336</学号>
+				<团队>啊对对队</团队>
+			</作者>
+			<完成日期>2021-11-11</完成日期>
+			<版本更新信息><font xmlns="http://www.w3.org/1999/xhtml" face="仿宋_GB2312">v2.1.0 完成了对《测试报告》的编写</font></版本更新信息>
+		</状态与版本信息>
+		<引言>
+			<使用人员><div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">二手商品买家、二手商品卖家、系统管理员</font></div></使用人员>
+			<编写目的>本测试计划旨在对整个软件的测试进行系统的规划，包括测试的方法、功能时间、流程做出整体的规划，保证可以及时发现系统的错误和缺陷，并改善。</编写目的>
+			<背景><div xmlns="http://www.w3.org/1999/xhtml">系统名称：二手商品交易平台（线上商城）</div>
+<div xmlns="http://www.w3.org/1999/xhtml">开发历史：后端开发完成、前端开发完成</div>
+<div xmlns="http://www.w3.org/1999/xhtml">项目测试：个人电脑、网络服务器</div></背景>
+			<定义与缩写>
+				<术语>缺陷</术语>
+				<解释><div xmlns="http://www.w3.org/1999/xhtml"><font color="#000000">软件</font><font color="#000000">缺陷</font>（Defect），常常又被叫做Bug。所谓<font color="#000000">软件</font><font color="#000000">缺陷</font>，即为<font color="#000000">计算机软件</font>或程序中存在的某种破坏正常运行能力的问题、错误，或者隐藏的功能缺陷。<font color="#000000">缺陷</font>的存在会导致<font color="#000000">软件</font>产品在某种程度上不能满足用户的需要。IEEE729-1983对<font color="#000000">缺陷</font>有一个标准的定义：从产品内部看，缺陷是<font color="#000000">软件</font>产品开发或维护过程中存在的错误、毛病等各种问题；从产品外部看，缺陷是系统所需要实现的某种功能的失效或违背。</div></解释>
+			</定义与缩写>
+			<参考资料>
+				<条目></条目>
+			</参考资料>
+		</引言>
+	</首部>
+	<测试概要>
+		<测试用例设计>利用Junit进行后端功能的测试，前端测试单元功能的缺陷与完整性。</测试用例设计>
+		<测试环境与配置>
+			<硬件环境><div xmlns="http://www.w3.org/1999/xhtml">Intel core i7 8700k</div>
+<div xmlns="http://www.w3.org/1999/xhtml">内存16G</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div></硬件环境>
+			<软件环境><div xmlns="http://www.w3.org/1999/xhtml">Microsoft Windows10</div>
+<div xmlns="http://www.w3.org/1999/xhtml">eclipse</div></软件环境>
+		</测试环境与配置>
+		<测试方法和工具><div xmlns="http://www.w3.org/1999/xhtml">测试方法为黑盒测试方法</div>
+<div xmlns="http://www.w3.org/1999/xhtml">测试工具：Junit为主要测试，环境为VSCode、IDEA、JDK8、MySQL</div></测试方法和工具>
+	</测试概要>
+	<测试结果>
+		<测试执行情况与记录><div xmlns="http://www.w3.org/1999/xhtml">测试执行情况良好，测试通过与不通过情况及时地记录了下来，并得到了及时的反馈。</div>
+<div xmlns="http://www.w3.org/1999/xhtml">使用的各个函数的测试用例均存放在数据库中。</div></测试执行情况与记录>
+		<覆盖分析>此次测试覆盖了部分函数，包括login()和insertZhuce()两个函数。</覆盖分析>
+	</测试结果>
+	<缺陷的统计与分析>
+		<缺陷统计><div xmlns="http://www.w3.org/1999/xhtml">大部分函数功能正常。存在细微的bug。</div></缺陷统计>
+		<缺陷分析>用户注册时的合法输入性不高，用户可以将毫不相干的信息填入项中，测试依然通过。</缺陷分析>
+	</缺陷的统计与分析>
+	<测试结论与建议>
+		<结论>本次测试的情况良好，程序的稳定性很高。</结论>
+		<建议>程序需要进一步细致的确认信息的合法输入性。</建议>
+	</测试结论与建议>
+</测试报告>

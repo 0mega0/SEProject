@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.2" PIVersion="1.0.0.0" href="file:///D:\教学\软件项目实践\软件项目实践\文档模板\《测试报告》模板.xsn" name="urn:schemas-microsoft-com:office:infopath:--EU--Qo:" language="zh-cn" productVersion="15.0.0" ?><?mso-application progid="InfoPath.Document"?><测试报告 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<首部 项目名称="二手交易平台" 项目标识="线上市场" version="1.0">
+		<状态与版本信息>
+			<文件状态>正式发布</文件状态>
+			<文件标识>测试报告</文件标识>
+			<当前版本>v2.1.0</当前版本>
+			<作者>
+				<姓名>张子文</姓名>
+				<学号>2018011358</学号>
+				<团队>啊对对队</团队>
+			</作者>
+			<完成日期>2021-11-12</完成日期>
+			<版本更新信息><font xmlns="http://www.w3.org/1999/xhtml" face="仿宋_GB2312">v2.1.0 记录了对所有测试项目和测试用例的详细信息</font></版本更新信息>
+		</状态与版本信息>
+		<引言>
+			<使用人员><div xmlns="http://www.w3.org/1999/xhtml"><font size="2" face="宋体">二手商品买家、二手商品卖家、系统管理员</font></div></使用人员>
+			<编写目的><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><font size="2" face="宋体">a.名称：二手交易平台（线上市场） </font></div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<div><font size="2" face="宋体">b.本项目由啊对对队提出并由俞昊洋担任项目经理，由俞昊洋、宋雪霞担任配置组，由吴昊、徐伟、崔辰 </font></div>
+<div><font size="2" face="宋体">垚、张弈凡、刘科宏、张子文、刘晨阳担任开发组，由俞昊洋、宋雪霞、吴昊、崔辰垚担任管理组，周俊 </font></div>
+<div><font size="2" face="宋体">毅、吴浩涵、汪筱青担任质保组和用户组，并在个人笔记本上进行运维。旨在为有二手商品买卖需求的用 </font></div>
+<div><font size="2" face="宋体">户提供一个可供交易的平台。 </font></div></div></编写目的>
+			<背景><div xmlns="http://www.w3.org/1999/xhtml">系统名称：二手商品交易平台（线上商城）</div>
+<div xmlns="http://www.w3.org/1999/xhtml">开发历史：后端开发完成、前端开发完成</div>
+<div xmlns="http://www.w3.org/1999/xhtml">项目测试：个人电脑、网络服务器</div></背景>
+			<定义与缩写>
+				<术语>运维</术语>
+				<解释><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><font size="2" face="宋体">指互联网运维，通常属于技术部门，与研发、测试、系统管理同为互联网产品技术支撑的4大部门，这 </font></div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<div><font size="2" face="宋体">个划分在国内和国外以及大小公司间都会多少有一些不同。 </font></div>
+<div><font size="2" face="宋体">一个互联网产品的生成一般经历的过程是：产品经理、需求分析、研发部门开发、测试部门测试、运 </font></div>
+<div><font size="2" face="宋体">维部门部署发布以及长期的运行维护。 </font></div>
+<div><font size="2" face="宋体">运维，本质上是对网络、服务器、服务的生命周期各个阶段的运营与维护，在成本、稳定性、效率上 </font></div>
+<div><font size="2" face="宋体">达成一致可接受的状态。 </font></div></div></解释>
+			</定义与缩写>
+			<参考资料>
+				<条目></条目>
+			</参考资料>
+		</引言>
+	</首部>
+	<测试概要>
+		<测试用例设计><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">postman：</div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Uri：本地运行项目Uri</div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">输入：根据对应方法要求传参</div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">结果：输出预设在程序中的内容</div></测试用例设计>
+		<测试环境与配置>
+			<硬件环境>i7-8750H，8G内存</硬件环境>
+			<软件环境>JDK1.8、eclipse、MySql</软件环境>
+		</测试环境与配置>
+		<测试方法和工具><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">postman</div></测试方法和工具>
+	</测试概要>
+	<测试结果>
+		<测试执行情况与记录><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">接口测试所有用例执行均成功</div></测试执行情况与记录>
+		<覆盖分析><div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<div xmlns="http://www.w3.org/1999/xhtml">用户:</div>
+<div xmlns="http://www.w3.org/1999/xhtml">1.用户登录</div>
+<div xmlns="http://www.w3.org/1999/xhtml">2.用户注册</div>
+<div xmlns="http://www.w3.org/1999/xhtml">3.获取待验证的注册用户列表</div>
+<div xmlns="http://www.w3.org/1999/xhtml">4.删除待验证表的允许登录的注册用户</div>
+<div xmlns="http://www.w3.org/1999/xhtml">5.允许登录的注册用户信息插入用户表</div>
+<div xmlns="http://www.w3.org/1999/xhtml">6.用户更改个人信息</div>
+<div xmlns="http://www.w3.org/1999/xhtml">7.获取注册商家的用户信息</div>
+<div xmlns="http://www.w3.org/1999/xhtml">8.获取店铺等级</div>
+<div xmlns="http://www.w3.org/1999/xhtml">9.充值</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml">购物车:</div>
+<div xmlns="http://www.w3.org/1999/xhtml">1.添加购物车</div>
+<div xmlns="http://www.w3.org/1999/xhtml">2.从购物车删除商品</div>
+<div xmlns="http://www.w3.org/1999/xhtml">3.更改加入购物车的商品数量</div>
+<div xmlns="http://www.w3.org/1999/xhtml">4.用户已经下单的商品</div>
+<div xmlns="http://www.w3.org/1999/xhtml">5.商家确认发货</div>
+<div xmlns="http://www.w3.org/1999/xhtml">6.商家退款订单</div>
+<div xmlns="http://www.w3.org/1999/xhtml">7.用户确认收货表</div>
+<div xmlns="http://www.w3.org/1999/xhtml">8.用户历史订单</div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml">评论:</div>
+<div xmlns="http://www.w3.org/1999/xhtml">
+<div>1.添加评价</div>
+<div>2.获取商品所有评论</div>
+<div> </div></div>
+<div xmlns="http://www.w3.org/1999/xhtml"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml">商品:</div>
+<div xmlns="http://www.w3.org/1999/xhtml">
+<div>1.管理员获取待审核的商品</div>
+<div>2.允许商品上架</div>
+<div>3.获取所有允许上架的商品展示在主页面</div>
+<div>4.获取所有商品</div>
+<div>5.商品详情页</div>
+<div>6.商家下架商品</div>
+<div>7.允许商品上架</div>
+<div>8.修改商品数量</div>
+<div>9.修改商品价格</div></div></div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div><font size="2" face="宋体"><font size="2" face="宋体"> </font></font></div></div></div></div></div></div></div></div></div></div></div></div></div></覆盖分析>
+	</测试结果>
+	<缺陷的统计与分析>
+		<缺陷统计>数据库中的表列参数类型为Varchar（255）</缺陷统计>
+		<缺陷分析>只能测试输入正确性测试，数组越界的情况无法测试</缺陷分析>
+	</缺陷的统计与分析>
+	<测试结论与建议>
+		<结论>接口正确性测试通过</结论>
+		<建议>更改数据库建表中的数据类型</建议>
+	</测试结论与建议>
+</测试报告>
