@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 主要测试了Service层评论的相关功能，包括：
  * 1.//获取用户评论
- * @author zzw
+ * @author 张子文
  *
  */
 
@@ -41,7 +41,7 @@ public class CommentServiceTest {
     public void getComment(){//获取用户评论
         try{
             List<comment> comment = commentService.getcomment("adde99dd-2ab5-4b4e-9e98-ca3e6ee15bdc");
-            System.out.println(Arrays.toString(comment.toArray(new comment[]{})));
+//            System.out.println(Arrays.toString(comment.toArray(new comment[]{})));
             logger.debug(Arrays.toString(comment.toArray(new comment[]{})));
         }catch (Exception e){
             e.printStackTrace();
