@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 主要测试了Dao层评论的相关功能，包括：
  * 1.获取商品评价
- * @author zzw
+ * @author 张子文
  *
  */
 
